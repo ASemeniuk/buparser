@@ -46,12 +46,11 @@ public class BuParser {
 
     private static final Pattern PATTERN_TITLE = Pattern.compile("Версия для печати.*?<br> *?<p> *?<b>(.*?)</p>");
     private static final Pattern PATTERN_READINGS = Pattern.compile("<div class=\"read\">(.*?)</div> *?<div class");
-    private static final Pattern PATTERN_READING = Pattern.compile("([^<]*?)[,:-]? *?<a.*?>([^<]*?)\\.?</a>( *?<div.*?</div>)? *?\\&nbsp;");
+    private static final Pattern PATTERN_READING = Pattern.compile("([^<]*?)[,:\\-]? *?<a.*?>([^<]*?)[\\.,]?</a>( *?<div.*?</div>)? *?\\&nbsp;");
     private static final Pattern PATTERN_ROMAN = Pattern.compile("([IVXLCDM]+), ");
     private static final Pattern PATTERN_COMMENT_SEPARATOR = Pattern.compile("\\d\\.");
-    private static final Pattern PATTERN_COMMENT_LEFT = Pattern.compile("(.*?)[,:\\–\\-]? *?(([123] )?[А-Я][а-я]+?\\.,.*\\d)\\.?");
-
-    private static Set<Integer> EXCEPTIONAL_DAYS = new HashSet<>(Arrays.asList());
+    private static final Pattern PATTERN_COMMENT_LEFT = Pattern.compile("(.*?)[,:\\-]? *?(([123] )?[А-Я][а-я]+?\\.,.*\\d)\\.?");
+    private static final Pattern PATTERN_SUBSTITUTE = Pattern.compile("(.*?) - (за (понедельник|вторник|среду|четверг|пятницу|субботу|воскресенье) и за (понедельник|вторник|среду|четверг|пятницу|субботу|воскресенье))( \\(под зачало\\))?");
 
     private static List<String> HOLIDAYS_STATIC = Arrays.asList("09-21", "09-27", "12-04", "01-07", "01-19", "02-15", "04-07", "08-19", "08-28", "09-11", "10-14", "01-14", "07-07", "07-12");
 
@@ -175,19 +174,24 @@ public class BuParser {
     }
 
     //==========================================================================
-    private static String beautifyLink(String link) {
-        link = link.replaceAll(", *?\\d+ зач\\.( \\(от полу&#769;\\))? *?,", "");
+    private static String beautifyLink(String link) throws Exception {
         link = link.replaceAll("последи\\&#769;", "");
+        link = link.replaceAll(", *?\\d+ зач\\.( \\(от полу&#769;\\))? *?,", "");
         link = link.replaceAll("\\*", "");
         link = link.replaceAll("^(\\d) ([А-Яа-я])", "$1$2");
         link = link.replaceAll("Сол\\.", "Фес.");
         link = link.replaceAll("Притч\\.", "Прит.");
+        link = link.replaceAll(" \\(Недели \\d{1,2}-й\\)", "").trim();
         link = link.replaceAll("(\\d\\d)\\d\\d\\d", "$1");
+        link = link.replaceAll("; ", ", ");
         Matcher romanMatcher = PATTERN_ROMAN.matcher(link);
         while (romanMatcher.find()) {
             String numbers = link.substring(romanMatcher.end()).replaceAll("(\\d), (\\d)", "$1,$2");
             link = link.substring(0, romanMatcher.start()) + RomanNumbers.romanToDecimal(romanMatcher.group(1)) + ":" + numbers;
             romanMatcher = PATTERN_ROMAN.matcher(link);
+        }
+        if (!VALIDATOR_READINGS.matcher(link.toLowerCase() + ";").matches()) {
+            throw new Exception("Invalid readings: " + link);
         }
         return link;
     }
@@ -198,9 +202,6 @@ public class BuParser {
         if (leftMatcher.matches()) {
             String link = leftMatcher.group(2);
             link = beautifyLink(link);
-            if (VALIDATOR_READINGS.matcher(link).matches()) {
-                throw new Exception("Invalid readings: " + link);
-            }
             String comment = leftMatcher.group(1).trim();
             if (PATTERN_ROMAN.matcher(comment).find()) {
                 throw new Exception("Illegal comment: " + comment);
@@ -220,7 +221,12 @@ public class BuParser {
             String left = data.substring(0, separator.end());
             lines.add(splitLineAndComment(left));
             //--- Process right part ---
-            String right = data.substring(separator.end() + 1).trim();
+            String right;
+            if (separator.end() >= data.length()) {
+                right = lines.get(lines.size() - 1).getComment();
+            } else {
+                right = data.substring(separator.end() + 1).trim();
+            }
             if (PATTERN_ROMAN.matcher(right).find()) { //2 links present
                 Line line = splitLineAndComment(right);
                 lines.add(line);
@@ -243,27 +249,34 @@ public class BuParser {
 
         //--- Parse readings ---
         String readingsData = readDataFromURL(String.format(URL_READINGS, day));
+        readingsData = readingsData.replace('–', '-');
         String readings = "";
         Matcher readingsMatcher = PATTERN_READINGS.matcher(readingsData);
         if (readingsMatcher.find()) {
             readings = readingsMatcher.group(1).trim() + "&nbsp;";
         }
 //            System.out.println(readings); //TODO remove
-        if (readings.length() == 0 && !EXCEPTIONAL_DAYS.contains(day.get(Calendar.DAY_OF_YEAR))) {
+        if (readings.length() == 0) {
             throw new Exception("No readings data found" + readingsData);
         }
         int numberOfNbspsCalc = (readings.length() - readings.replaceAll(Pattern.quote("&nbsp;"), "").length()) / "&nbsp;".length();
+        int numberOfPericopes = (readings.length() - readings.replaceAll(Pattern.quote("зач."), "").length()) / "зач.".length();
         Matcher readingMatcher = PATTERN_READING.matcher(readings);
         String lastComment = "";
         int numberOfNbspsEmp = 0;
         while (readingMatcher.find()) {
             String link = readingMatcher.group(2).trim();
             link = beautifyLink(link);
-            if (VALIDATOR_READINGS.matcher(link).matches()) {
-                throw new Exception("Invalid readings: " + link);
+            String comment = readingMatcher.group(1).trim();
+
+            Matcher substituteMatcher = PATTERN_SUBSTITUTE.matcher(comment);
+            if (substituteMatcher.matches()) {
+                String subLink = substituteMatcher.group(1);
+                subLink = beautifyLink(subLink);
+                result.add(new Line(subLink, lastComment));
+                comment = substituteMatcher.group(2);
             }
 
-            String comment = readingMatcher.group(1).trim();
             if (PATTERN_ROMAN.matcher(comment).find()) {
                 List<Line> lines = extractLinesFromComment(comment);
                 lines.get(lines.size() - 1).setLink(link);
@@ -283,7 +296,10 @@ public class BuParser {
             }
         }
         if (numberOfNbspsCalc != numberOfNbspsEmp) {
-            throw new Exception("Not all readings found: " + readings);
+            throw new Exception("Not every reading found (nbsp): " + readings);
+        }
+        if (result.size() != numberOfPericopes) {
+            throw new Exception("Not every reading found (pericope): " + readings);
         }
 
         return result;
@@ -300,7 +316,7 @@ public class BuParser {
         new File(String.format(PATH_DIRECTORY, year)).mkdirs();
         int errorCount = 0;
         Calendar currentDay = Calendar.getInstance();
-        currentDay.set(year, Calendar.NOVEMBER, 19);
+        currentDay.set(year, Calendar.FEBRUARY, 14);
 
         //--- Run entry loop ---
         while (currentDay.get(Calendar.YEAR) == year) {
@@ -353,7 +369,7 @@ public class BuParser {
             info.append(currentEntry.isHoliday() ? '1' : '0');
             info.append('0');
             currentDay.add(Calendar.DAY_OF_YEAR, 1);
-//            break; //TODO remove
+            break; //TODO remove
         }
 
         //--- Save info file ---
