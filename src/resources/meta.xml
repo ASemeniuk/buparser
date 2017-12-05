@@ -1,0 +1,2057 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books>
+  <book ord="1" size="50">
+    <name_ru>Бытие</name_ru>
+    <name_cs>Кни1га бытіE</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>Быт</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="31"/>
+      <chapter ord="2" size="25"/>
+      <chapter ord="3" size="24"/>
+      <chapter ord="4" size="26"/>
+      <chapter ord="5" size="32"/>
+      <chapter ord="6" size="22"/>
+      <chapter ord="7" size="24"/>
+      <chapter ord="8" size="22"/>
+      <chapter ord="9" size="29"/>
+      <chapter ord="10" size="32"/>
+      <chapter ord="11" size="32"/>
+      <chapter ord="12" size="20"/>
+      <chapter ord="13" size="18"/>
+      <chapter ord="14" size="24"/>
+      <chapter ord="15" size="21"/>
+      <chapter ord="16" size="16"/>
+      <chapter ord="17" size="27"/>
+      <chapter ord="18" size="33"/>
+      <chapter ord="19" size="38"/>
+      <chapter ord="20" size="18"/>
+      <chapter ord="21" size="34"/>
+      <chapter ord="22" size="24"/>
+      <chapter ord="23" size="20"/>
+      <chapter ord="24" size="67"/>
+      <chapter ord="25" size="34"/>
+      <chapter ord="26" size="35"/>
+      <chapter ord="27" size="46"/>
+      <chapter ord="28" size="22"/>
+      <chapter ord="29" size="35"/>
+      <chapter ord="30" size="43"/>
+      <chapter ord="31" size="55"/>
+      <chapter ord="32" size="32"/>
+      <chapter ord="33" size="20"/>
+      <chapter ord="34" size="31"/>
+      <chapter ord="35" size="29"/>
+      <chapter ord="36" size="43"/>
+      <chapter ord="37" size="36"/>
+      <chapter ord="38" size="30"/>
+      <chapter ord="39" size="23"/>
+      <chapter ord="40" size="23"/>
+      <chapter ord="41" size="57"/>
+      <chapter ord="42" size="38"/>
+      <chapter ord="43" size="34"/>
+      <chapter ord="44" size="34"/>
+      <chapter ord="45" size="28"/>
+      <chapter ord="46" size="34"/>
+      <chapter ord="47" size="31"/>
+      <chapter ord="48" size="22"/>
+      <chapter ord="49" size="33"/>
+      <chapter ord="50" size="26"/>
+    </chapters>
+  </book>
+  <book ord="2" size="40">
+    <name_ru>Исход</name_ru>
+    <name_cs>Кни1га и3сх0дъ</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>Исх</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="22"/>
+      <chapter ord="2" size="25"/>
+      <chapter ord="3" size="22"/>
+      <chapter ord="4" size="31"/>
+      <chapter ord="5" size="23"/>
+      <chapter ord="6" size="30"/>
+      <chapter ord="7" size="25"/>
+      <chapter ord="8" size="32"/>
+      <chapter ord="9" size="35"/>
+      <chapter ord="10" size="29"/>
+      <chapter ord="11" size="10"/>
+      <chapter ord="12" size="51"/>
+      <chapter ord="13" size="22"/>
+      <chapter ord="14" size="32"/>
+      <chapter ord="15" size="27"/>
+      <chapter ord="16" size="36"/>
+      <chapter ord="17" size="16"/>
+      <chapter ord="18" size="27"/>
+      <chapter ord="19" size="25"/>
+      <chapter ord="20" size="26"/>
+      <chapter ord="21" size="36"/>
+      <chapter ord="22" size="31"/>
+      <chapter ord="23" size="33"/>
+      <chapter ord="24" size="18"/>
+      <chapter ord="25" size="40"/>
+      <chapter ord="26" size="37"/>
+      <chapter ord="27" size="21"/>
+      <chapter ord="28" size="43"/>
+      <chapter ord="29" size="46"/>
+      <chapter ord="30" size="38"/>
+      <chapter ord="31" size="18"/>
+      <chapter ord="32" size="35"/>
+      <chapter ord="33" size="23"/>
+      <chapter ord="34" size="35"/>
+      <chapter ord="35" size="35"/>
+      <chapter ord="36" size="38"/>
+      <chapter ord="37" size="21"/>
+      <chapter ord="38" size="27"/>
+      <chapter ord="39" size="23"/>
+      <chapter ord="40" size="38"/>
+    </chapters>
+  </book>
+  <book ord="3" size="27">
+    <name_ru>Левит</name_ru>
+    <name_cs>Кни1га леvjтъ</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>Лев</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="17"/>
+      <chapter ord="2" size="16"/>
+      <chapter ord="3" size="17"/>
+      <chapter ord="4" size="35"/>
+      <chapter ord="5" size="19"/>
+      <chapter ord="6" size="30"/>
+      <chapter ord="7" size="38"/>
+      <chapter ord="8" size="36"/>
+      <chapter ord="9" size="24"/>
+      <chapter ord="10" size="20"/>
+      <chapter ord="11" size="47"/>
+      <chapter ord="12" size="8"/>
+      <chapter ord="13" size="59"/>
+      <chapter ord="14" size="57"/>
+      <chapter ord="15" size="33"/>
+      <chapter ord="16" size="34"/>
+      <chapter ord="17" size="16"/>
+      <chapter ord="18" size="30"/>
+      <chapter ord="19" size="37"/>
+      <chapter ord="20" size="27"/>
+      <chapter ord="21" size="24"/>
+      <chapter ord="22" size="33"/>
+      <chapter ord="23" size="44"/>
+      <chapter ord="24" size="23"/>
+      <chapter ord="25" size="55"/>
+      <chapter ord="26" size="46"/>
+      <chapter ord="27" size="34"/>
+    </chapters>
+  </book>
+  <book ord="4" size="36">
+    <name_ru>Числа</name_ru>
+    <name_cs>Кни1га чи1сла</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>Чис</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="54"/>
+      <chapter ord="2" size="34"/>
+      <chapter ord="3" size="51"/>
+      <chapter ord="4" size="49"/>
+      <chapter ord="5" size="31"/>
+      <chapter ord="6" size="27"/>
+      <chapter ord="7" size="89"/>
+      <chapter ord="8" size="26"/>
+      <chapter ord="9" size="23"/>
+      <chapter ord="10" size="36"/>
+      <chapter ord="11" size="35"/>
+      <chapter ord="12" size="15"/>
+      <chapter ord="13" size="34"/>
+      <chapter ord="14" size="45"/>
+      <chapter ord="15" size="41"/>
+      <chapter ord="16" size="50"/>
+      <chapter ord="17" size="13"/>
+      <chapter ord="18" size="32"/>
+      <chapter ord="19" size="22"/>
+      <chapter ord="20" size="30"/>
+      <chapter ord="21" size="35"/>
+      <chapter ord="22" size="41"/>
+      <chapter ord="23" size="30"/>
+      <chapter ord="24" size="25"/>
+      <chapter ord="25" size="18"/>
+      <chapter ord="26" size="65"/>
+      <chapter ord="27" size="23"/>
+      <chapter ord="28" size="31"/>
+      <chapter ord="29" size="39"/>
+      <chapter ord="30" size="17"/>
+      <chapter ord="31" size="54"/>
+      <chapter ord="32" size="42"/>
+      <chapter ord="33" size="56"/>
+      <chapter ord="34" size="29"/>
+      <chapter ord="35" size="34"/>
+      <chapter ord="36" size="13"/>
+    </chapters>
+  </book>
+  <book ord="5" size="34">
+    <name_ru>Второзаконие</name_ru>
+    <name_cs>Второзак0ніе</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>Втор</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="46"/>
+      <chapter ord="2" size="37"/>
+      <chapter ord="3" size="29"/>
+      <chapter ord="4" size="49"/>
+      <chapter ord="5" size="33"/>
+      <chapter ord="6" size="25"/>
+      <chapter ord="7" size="26"/>
+      <chapter ord="8" size="20"/>
+      <chapter ord="9" size="29"/>
+      <chapter ord="10" size="22"/>
+      <chapter ord="11" size="32"/>
+      <chapter ord="12" size="32"/>
+      <chapter ord="13" size="18"/>
+      <chapter ord="14" size="29"/>
+      <chapter ord="15" size="23"/>
+      <chapter ord="16" size="22"/>
+      <chapter ord="17" size="20"/>
+      <chapter ord="18" size="22"/>
+      <chapter ord="19" size="21"/>
+      <chapter ord="20" size="20"/>
+      <chapter ord="21" size="23"/>
+      <chapter ord="22" size="30"/>
+      <chapter ord="23" size="25"/>
+      <chapter ord="24" size="22"/>
+      <chapter ord="25" size="19"/>
+      <chapter ord="26" size="19"/>
+      <chapter ord="27" size="26"/>
+      <chapter ord="28" size="68"/>
+      <chapter ord="29" size="29"/>
+      <chapter ord="30" size="20"/>
+      <chapter ord="31" size="30"/>
+      <chapter ord="32" size="52"/>
+      <chapter ord="33" size="29"/>
+      <chapter ord="34" size="12"/>
+    </chapters>
+  </book>
+  <book ord="6" size="24">
+    <name_ru>Книга Иисуса Навина</name_ru>
+    <name_cs>Кни1га їисyса наvи1на</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>Нав</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="18"/>
+      <chapter ord="2" size="24"/>
+      <chapter ord="3" size="17"/>
+      <chapter ord="4" size="24"/>
+      <chapter ord="5" size="16"/>
+      <chapter ord="6" size="26"/>
+      <chapter ord="7" size="26"/>
+      <chapter ord="8" size="35"/>
+      <chapter ord="9" size="27"/>
+      <chapter ord="10" size="43"/>
+      <chapter ord="11" size="23"/>
+      <chapter ord="12" size="24"/>
+      <chapter ord="13" size="33"/>
+      <chapter ord="14" size="15"/>
+      <chapter ord="15" size="63"/>
+      <chapter ord="16" size="10"/>
+      <chapter ord="17" size="18"/>
+      <chapter ord="18" size="28"/>
+      <chapter ord="19" size="51"/>
+      <chapter ord="20" size="9"/>
+      <chapter ord="21" size="45"/>
+      <chapter ord="22" size="34"/>
+      <chapter ord="23" size="16"/>
+      <chapter ord="24" size="36"/>
+    </chapters>
+  </book>
+  <book ord="7" size="21">
+    <name_ru>Книга Судей</name_ru>
+    <name_cs>Кни1га судjй їсрaилевыхъ</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>Суд</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="36"/>
+      <chapter ord="2" size="23"/>
+      <chapter ord="3" size="31"/>
+      <chapter ord="4" size="24"/>
+      <chapter ord="5" size="32"/>
+      <chapter ord="6" size="40"/>
+      <chapter ord="7" size="25"/>
+      <chapter ord="8" size="35"/>
+      <chapter ord="9" size="57"/>
+      <chapter ord="10" size="18"/>
+      <chapter ord="11" size="40"/>
+      <chapter ord="12" size="15"/>
+      <chapter ord="13" size="25"/>
+      <chapter ord="14" size="20"/>
+      <chapter ord="15" size="20"/>
+      <chapter ord="16" size="31"/>
+      <chapter ord="17" size="13"/>
+      <chapter ord="18" size="31"/>
+      <chapter ord="19" size="30"/>
+      <chapter ord="20" size="48"/>
+      <chapter ord="21" size="24"/>
+    </chapters>
+  </book>
+  <book ord="8" size="4">
+    <name_ru>Книга Руфь</name_ru>
+    <name_cs>Кни1га рyfь</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>Руф</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="22"/>
+      <chapter ord="2" size="23"/>
+      <chapter ord="3" size="18"/>
+      <chapter ord="4" size="22"/>
+    </chapters>
+  </book>
+  <book ord="9" size="31">
+    <name_ru>Первая книга Царств</name_ru>
+    <name_cs>Кни1га пeрваz цaрствъ</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>1Цар</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="28"/>
+      <chapter ord="2" size="36"/>
+      <chapter ord="3" size="21"/>
+      <chapter ord="4" size="22"/>
+      <chapter ord="5" size="12"/>
+      <chapter ord="6" size="21"/>
+      <chapter ord="7" size="17"/>
+      <chapter ord="8" size="22"/>
+      <chapter ord="9" size="27"/>
+      <chapter ord="10" size="27"/>
+      <chapter ord="11" size="15"/>
+      <chapter ord="12" size="25"/>
+      <chapter ord="13" size="23"/>
+      <chapter ord="14" size="52"/>
+      <chapter ord="15" size="35"/>
+      <chapter ord="16" size="23"/>
+      <chapter ord="17" size="58"/>
+      <chapter ord="18" size="30"/>
+      <chapter ord="19" size="24"/>
+      <chapter ord="20" size="43"/>
+      <chapter ord="21" size="15"/>
+      <chapter ord="22" size="23"/>
+      <chapter ord="23" size="28"/>
+      <chapter ord="24" size="23"/>
+      <chapter ord="25" size="44"/>
+      <chapter ord="26" size="25"/>
+      <chapter ord="27" size="12"/>
+      <chapter ord="28" size="25"/>
+      <chapter ord="29" size="11"/>
+      <chapter ord="30" size="31"/>
+      <chapter ord="31" size="13"/>
+    </chapters>
+  </book>
+  <book ord="10" size="24">
+    <name_ru>Вторая книга Царств</name_ru>
+    <name_cs>Кни1га вторaz цaрствъ</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>2Цар</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="27"/>
+      <chapter ord="2" size="32"/>
+      <chapter ord="3" size="39"/>
+      <chapter ord="4" size="12"/>
+      <chapter ord="5" size="25"/>
+      <chapter ord="6" size="23"/>
+      <chapter ord="7" size="29"/>
+      <chapter ord="8" size="18"/>
+      <chapter ord="9" size="13"/>
+      <chapter ord="10" size="19"/>
+      <chapter ord="11" size="27"/>
+      <chapter ord="12" size="31"/>
+      <chapter ord="13" size="39"/>
+      <chapter ord="14" size="33"/>
+      <chapter ord="15" size="37"/>
+      <chapter ord="16" size="23"/>
+      <chapter ord="17" size="29"/>
+      <chapter ord="18" size="33"/>
+      <chapter ord="19" size="43"/>
+      <chapter ord="20" size="26"/>
+      <chapter ord="21" size="22"/>
+      <chapter ord="22" size="51"/>
+      <chapter ord="23" size="39"/>
+      <chapter ord="24" size="25"/>
+    </chapters>
+  </book>
+  <book ord="11" size="22">
+    <name_ru>Третья книга царств</name_ru>
+    <name_cs>Кни1га трeтіz цaрствъ</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>3Цар</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="53"/>
+      <chapter ord="2" size="46"/>
+      <chapter ord="3" size="28"/>
+      <chapter ord="4" size="34"/>
+      <chapter ord="5" size="18"/>
+      <chapter ord="6" size="38"/>
+      <chapter ord="7" size="51"/>
+      <chapter ord="8" size="66"/>
+      <chapter ord="9" size="28"/>
+      <chapter ord="10" size="29"/>
+      <chapter ord="11" size="43"/>
+      <chapter ord="12" size="33"/>
+      <chapter ord="13" size="34"/>
+      <chapter ord="14" size="31"/>
+      <chapter ord="15" size="34"/>
+      <chapter ord="16" size="34"/>
+      <chapter ord="17" size="24"/>
+      <chapter ord="18" size="46"/>
+      <chapter ord="19" size="21"/>
+      <chapter ord="20" size="43"/>
+      <chapter ord="21" size="29"/>
+      <chapter ord="22" size="53"/>
+    </chapters>
+  </book>
+  <book ord="12" size="25">
+    <name_ru>Четвертая книга Царств</name_ru>
+    <name_cs>Кни1га четвeртаz цaрствъ</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>4Цар</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="18"/>
+      <chapter ord="2" size="25"/>
+      <chapter ord="3" size="27"/>
+      <chapter ord="4" size="44"/>
+      <chapter ord="5" size="27"/>
+      <chapter ord="6" size="33"/>
+      <chapter ord="7" size="20"/>
+      <chapter ord="8" size="29"/>
+      <chapter ord="9" size="37"/>
+      <chapter ord="10" size="36"/>
+      <chapter ord="11" size="21"/>
+      <chapter ord="12" size="21"/>
+      <chapter ord="13" size="25"/>
+      <chapter ord="14" size="29"/>
+      <chapter ord="15" size="38"/>
+      <chapter ord="16" size="20"/>
+      <chapter ord="17" size="41"/>
+      <chapter ord="18" size="37"/>
+      <chapter ord="19" size="37"/>
+      <chapter ord="20" size="21"/>
+      <chapter ord="21" size="26"/>
+      <chapter ord="22" size="20"/>
+      <chapter ord="23" size="37"/>
+      <chapter ord="24" size="20"/>
+      <chapter ord="25" size="30"/>
+    </chapters>
+  </book>
+  <book ord="13" size="29">
+    <name_ru>Первая книга Хроник</name_ru>
+    <name_cs>Кни1га пeрваz паралипомeнwнъ</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>1Хр</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="54"/>
+      <chapter ord="2" size="55"/>
+      <chapter ord="3" size="24"/>
+      <chapter ord="4" size="43"/>
+      <chapter ord="5" size="26"/>
+      <chapter ord="6" size="81"/>
+      <chapter ord="7" size="40"/>
+      <chapter ord="8" size="40"/>
+      <chapter ord="9" size="44"/>
+      <chapter ord="10" size="14"/>
+      <chapter ord="11" size="47"/>
+      <chapter ord="12" size="40"/>
+      <chapter ord="13" size="14"/>
+      <chapter ord="14" size="17"/>
+      <chapter ord="15" size="29"/>
+      <chapter ord="16" size="43"/>
+      <chapter ord="17" size="27"/>
+      <chapter ord="18" size="17"/>
+      <chapter ord="19" size="19"/>
+      <chapter ord="20" size="8"/>
+      <chapter ord="21" size="30"/>
+      <chapter ord="22" size="19"/>
+      <chapter ord="23" size="32"/>
+      <chapter ord="24" size="31"/>
+      <chapter ord="25" size="31"/>
+      <chapter ord="26" size="32"/>
+      <chapter ord="27" size="34"/>
+      <chapter ord="28" size="21"/>
+      <chapter ord="29" size="30"/>
+    </chapters>
+  </book>
+  <book ord="14" size="36">
+    <name_ru>Вторая книга Хроник</name_ru>
+    <name_cs>Кни1га вторaz паралипомeнwнъ</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>2Хр</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="17"/>
+      <chapter ord="2" size="18"/>
+      <chapter ord="3" size="17"/>
+      <chapter ord="4" size="22"/>
+      <chapter ord="5" size="14"/>
+      <chapter ord="6" size="42"/>
+      <chapter ord="7" size="22"/>
+      <chapter ord="8" size="18"/>
+      <chapter ord="9" size="31"/>
+      <chapter ord="10" size="19"/>
+      <chapter ord="11" size="23"/>
+      <chapter ord="12" size="16"/>
+      <chapter ord="13" size="22"/>
+      <chapter ord="14" size="15"/>
+      <chapter ord="15" size="19"/>
+      <chapter ord="16" size="14"/>
+      <chapter ord="17" size="19"/>
+      <chapter ord="18" size="34"/>
+      <chapter ord="19" size="11"/>
+      <chapter ord="20" size="37"/>
+      <chapter ord="21" size="20"/>
+      <chapter ord="22" size="12"/>
+      <chapter ord="23" size="21"/>
+      <chapter ord="24" size="27"/>
+      <chapter ord="25" size="28"/>
+      <chapter ord="26" size="23"/>
+      <chapter ord="27" size="9"/>
+      <chapter ord="28" size="27"/>
+      <chapter ord="29" size="36"/>
+      <chapter ord="30" size="27"/>
+      <chapter ord="31" size="21"/>
+      <chapter ord="32" size="33"/>
+      <chapter ord="33" size="25"/>
+      <chapter ord="34" size="33"/>
+      <chapter ord="35" size="27"/>
+      <chapter ord="36" size="23"/>
+    </chapters>
+  </book>
+  <book ord="15" size="10">
+    <name_ru>Первая книга Ездры</name_ru>
+    <name_cs>Кни1га пeрваz є4здры</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>Езд</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="11"/>
+      <chapter ord="2" size="70"/>
+      <chapter ord="3" size="13"/>
+      <chapter ord="4" size="24"/>
+      <chapter ord="5" size="17"/>
+      <chapter ord="6" size="22"/>
+      <chapter ord="7" size="28"/>
+      <chapter ord="8" size="36"/>
+      <chapter ord="9" size="15"/>
+      <chapter ord="10" size="44"/>
+    </chapters>
+  </book>
+  <book ord="16" size="13">
+    <name_ru>Книга Неемии</name_ru>
+    <name_cs>Кни1га неемjи</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>Неем</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="11"/>
+      <chapter ord="2" size="20"/>
+      <chapter ord="3" size="32"/>
+      <chapter ord="4" size="23"/>
+      <chapter ord="5" size="19"/>
+      <chapter ord="6" size="19"/>
+      <chapter ord="7" size="73"/>
+      <chapter ord="8" size="18"/>
+      <chapter ord="9" size="38"/>
+      <chapter ord="10" size="39"/>
+      <chapter ord="11" size="36"/>
+      <chapter ord="12" size="47"/>
+      <chapter ord="13" size="31"/>
+    </chapters>
+  </book>
+  <book ord="17" size="9">
+    <name_ru>Вторая книга Ездры</name_ru>
+    <name_cs>Кни1га вторaz є4здры</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>2Езд</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="58"/>
+      <chapter ord="2" size="31"/>
+      <chapter ord="3" size="24"/>
+      <chapter ord="4" size="63"/>
+      <chapter ord="5" size="70"/>
+      <chapter ord="6" size="34"/>
+      <chapter ord="7" size="15"/>
+      <chapter ord="8" size="92"/>
+      <chapter ord="9" size="55"/>
+    </chapters>
+  </book>
+  <book ord="18" size="14">
+    <name_ru>Книга Товита</name_ru>
+    <name_cs>Кни1га тwвjта</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>Тов</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="22"/>
+      <chapter ord="2" size="14"/>
+      <chapter ord="3" size="17"/>
+      <chapter ord="4" size="21"/>
+      <chapter ord="5" size="22"/>
+      <chapter ord="6" size="18"/>
+      <chapter ord="7" size="17"/>
+      <chapter ord="8" size="21"/>
+      <chapter ord="9" size="6"/>
+      <chapter ord="10" size="13"/>
+      <chapter ord="11" size="18"/>
+      <chapter ord="12" size="22"/>
+      <chapter ord="13" size="18"/>
+      <chapter ord="14" size="15"/>
+    </chapters>
+  </book>
+  <book ord="19" size="16">
+    <name_ru>Книга Иудифи</name_ru>
+    <name_cs>Кни1га їудjfы</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>Иудифь</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="16"/>
+      <chapter ord="2" size="28"/>
+      <chapter ord="3" size="10"/>
+      <chapter ord="4" size="15"/>
+      <chapter ord="5" size="24"/>
+      <chapter ord="6" size="21"/>
+      <chapter ord="7" size="32"/>
+      <chapter ord="8" size="36"/>
+      <chapter ord="9" size="14"/>
+      <chapter ord="10" size="23"/>
+      <chapter ord="11" size="23"/>
+      <chapter ord="12" size="20"/>
+      <chapter ord="13" size="20"/>
+      <chapter ord="14" size="19"/>
+      <chapter ord="15" size="14"/>
+      <chapter ord="16" size="25"/>
+    </chapters>
+  </book>
+  <book ord="20" size="10">
+    <name_ru>Книга Есфири</name_ru>
+    <name_cs>Кни1га є3сfи1ри</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>Есф</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="22"/>
+      <chapter ord="2" size="23"/>
+      <chapter ord="3" size="15"/>
+      <chapter ord="4" size="17"/>
+      <chapter ord="5" size="14"/>
+      <chapter ord="6" size="14"/>
+      <chapter ord="7" size="10"/>
+      <chapter ord="8" size="17"/>
+      <chapter ord="9" size="31"/>
+      <chapter ord="10" size="3"/>
+    </chapters>
+  </book>
+  <book ord="21" size="42">
+    <name_ru>Книга Иова</name_ru>
+    <name_cs>Кни1га jwва</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>Иов</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="22"/>
+      <chapter ord="2" size="13"/>
+      <chapter ord="3" size="26"/>
+      <chapter ord="4" size="21"/>
+      <chapter ord="5" size="27"/>
+      <chapter ord="6" size="30"/>
+      <chapter ord="7" size="21"/>
+      <chapter ord="8" size="22"/>
+      <chapter ord="9" size="35"/>
+      <chapter ord="10" size="22"/>
+      <chapter ord="11" size="20"/>
+      <chapter ord="12" size="25"/>
+      <chapter ord="13" size="28"/>
+      <chapter ord="14" size="22"/>
+      <chapter ord="15" size="35"/>
+      <chapter ord="16" size="22"/>
+      <chapter ord="17" size="16"/>
+      <chapter ord="18" size="21"/>
+      <chapter ord="19" size="29"/>
+      <chapter ord="20" size="29"/>
+      <chapter ord="21" size="34"/>
+      <chapter ord="22" size="30"/>
+      <chapter ord="23" size="17"/>
+      <chapter ord="24" size="25"/>
+      <chapter ord="25" size="6"/>
+      <chapter ord="26" size="14"/>
+      <chapter ord="27" size="23"/>
+      <chapter ord="28" size="28"/>
+      <chapter ord="29" size="25"/>
+      <chapter ord="30" size="31"/>
+      <chapter ord="31" size="40"/>
+      <chapter ord="32" size="22"/>
+      <chapter ord="33" size="33"/>
+      <chapter ord="34" size="37"/>
+      <chapter ord="35" size="16"/>
+      <chapter ord="36" size="33"/>
+      <chapter ord="37" size="24"/>
+      <chapter ord="38" size="41"/>
+      <chapter ord="39" size="35"/>
+      <chapter ord="40" size="27"/>
+      <chapter ord="41" size="25"/>
+      <chapter ord="42" size="17"/>
+    </chapters>
+  </book>
+  <book ord="22" size="151">
+    <name_ru>Псалтирь</name_ru>
+    <name_cs>Pалти1рь</name_cs>
+    <chapname_ru>Псалом</chapname_ru>
+    <chapname_cs>Pал0мъ</chapname_cs>
+    <shortname_ru>Пс</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="6"/>
+      <chapter ord="2" size="12"/>
+      <chapter ord="3" size="9"/>
+      <chapter ord="4" size="9"/>
+      <chapter ord="5" size="13"/>
+      <chapter ord="6" size="11"/>
+      <chapter ord="7" size="18"/>
+      <chapter ord="8" size="10"/>
+      <chapter ord="9" size="39"/>
+      <chapter ord="10" size="7"/>
+      <chapter ord="11" size="9"/>
+      <chapter ord="12" size="7"/>
+      <chapter ord="13" size="8"/>
+      <chapter ord="14" size="5"/>
+      <chapter ord="15" size="11"/>
+      <chapter ord="16" size="15"/>
+      <chapter ord="17" size="51"/>
+      <chapter ord="18" size="15"/>
+      <chapter ord="19" size="10"/>
+      <chapter ord="20" size="14"/>
+      <chapter ord="21" size="32"/>
+      <chapter ord="22" size="6"/>
+      <chapter ord="23" size="10"/>
+      <chapter ord="24" size="22"/>
+      <chapter ord="25" size="12"/>
+      <chapter ord="26" size="14"/>
+      <chapter ord="27" size="9"/>
+      <chapter ord="28" size="11"/>
+      <chapter ord="29" size="13"/>
+      <chapter ord="30" size="25"/>
+      <chapter ord="31" size="11"/>
+      <chapter ord="32" size="22"/>
+      <chapter ord="33" size="23"/>
+      <chapter ord="34" size="28"/>
+      <chapter ord="35" size="13"/>
+      <chapter ord="36" size="40"/>
+      <chapter ord="37" size="23"/>
+      <chapter ord="38" size="14"/>
+      <chapter ord="39" size="18"/>
+      <chapter ord="40" size="14"/>
+      <chapter ord="41" size="12"/>
+      <chapter ord="42" size="5"/>
+      <chapter ord="43" size="27"/>
+      <chapter ord="44" size="18"/>
+      <chapter ord="45" size="12"/>
+      <chapter ord="46" size="10"/>
+      <chapter ord="47" size="15"/>
+      <chapter ord="48" size="21"/>
+      <chapter ord="49" size="23"/>
+      <chapter ord="50" size="21"/>
+      <chapter ord="51" size="11"/>
+      <chapter ord="52" size="7"/>
+      <chapter ord="53" size="9"/>
+      <chapter ord="54" size="24"/>
+      <chapter ord="55" size="14"/>
+      <chapter ord="56" size="12"/>
+      <chapter ord="57" size="12"/>
+      <chapter ord="58" size="18"/>
+      <chapter ord="59" size="14"/>
+      <chapter ord="60" size="9"/>
+      <chapter ord="61" size="13"/>
+      <chapter ord="62" size="12"/>
+      <chapter ord="63" size="11"/>
+      <chapter ord="64" size="14"/>
+      <chapter ord="65" size="20"/>
+      <chapter ord="66" size="8"/>
+      <chapter ord="67" size="36"/>
+      <chapter ord="68" size="37"/>
+      <chapter ord="69" size="6"/>
+      <chapter ord="70" size="24"/>
+      <chapter ord="71" size="19"/>
+      <chapter ord="72" size="28"/>
+      <chapter ord="73" size="23"/>
+      <chapter ord="74" size="11"/>
+      <chapter ord="75" size="13"/>
+      <chapter ord="76" size="21"/>
+      <chapter ord="77" size="72"/>
+      <chapter ord="78" size="13"/>
+      <chapter ord="79" size="20"/>
+      <chapter ord="80" size="17"/>
+      <chapter ord="81" size="8"/>
+      <chapter ord="82" size="19"/>
+      <chapter ord="83" size="13"/>
+      <chapter ord="84" size="14"/>
+      <chapter ord="85" size="17"/>
+      <chapter ord="86" size="7"/>
+      <chapter ord="87" size="19"/>
+      <chapter ord="88" size="53"/>
+      <chapter ord="89" size="17"/>
+      <chapter ord="90" size="16"/>
+      <chapter ord="91" size="16"/>
+      <chapter ord="92" size="6"/>
+      <chapter ord="93" size="23"/>
+      <chapter ord="94" size="11"/>
+      <chapter ord="95" size="13"/>
+      <chapter ord="96" size="12"/>
+      <chapter ord="97" size="9"/>
+      <chapter ord="98" size="9"/>
+      <chapter ord="99" size="5"/>
+      <chapter ord="100" size="8"/>
+      <chapter ord="101" size="29"/>
+      <chapter ord="102" size="22"/>
+      <chapter ord="103" size="35"/>
+      <chapter ord="104" size="45"/>
+      <chapter ord="105" size="48"/>
+      <chapter ord="106" size="43"/>
+      <chapter ord="107" size="14"/>
+      <chapter ord="108" size="31"/>
+      <chapter ord="109" size="7"/>
+      <chapter ord="110" size="10"/>
+      <chapter ord="111" size="10"/>
+      <chapter ord="112" size="9"/>
+      <chapter ord="113" size="26"/>
+      <chapter ord="114" size="8"/>
+      <chapter ord="115" size="10"/>
+      <chapter ord="116" size="2"/>
+      <chapter ord="117" size="29"/>
+      <chapter ord="118" size="176"/>
+      <chapter ord="119" size="7"/>
+      <chapter ord="120" size="8"/>
+      <chapter ord="121" size="9"/>
+      <chapter ord="122" size="4"/>
+      <chapter ord="123" size="8"/>
+      <chapter ord="124" size="5"/>
+      <chapter ord="125" size="6"/>
+      <chapter ord="126" size="5"/>
+      <chapter ord="127" size="7"/>
+      <chapter ord="128" size="8"/>
+      <chapter ord="129" size="6"/>
+      <chapter ord="130" size="3"/>
+      <chapter ord="131" size="18"/>
+      <chapter ord="132" size="3"/>
+      <chapter ord="133" size="3"/>
+      <chapter ord="134" size="21"/>
+      <chapter ord="135" size="26"/>
+      <chapter ord="136" size="9"/>
+      <chapter ord="137" size="8"/>
+      <chapter ord="138" size="24"/>
+      <chapter ord="139" size="14"/>
+      <chapter ord="140" size="10"/>
+      <chapter ord="141" size="8"/>
+      <chapter ord="142" size="12"/>
+      <chapter ord="143" size="15"/>
+      <chapter ord="144" size="21"/>
+      <chapter ord="145" size="10"/>
+      <chapter ord="146" size="11"/>
+      <chapter ord="147" size="9"/>
+      <chapter ord="148" size="14"/>
+      <chapter ord="149" size="9"/>
+      <chapter ord="150" size="6"/>
+      <chapter ord="151" size="7"/>
+    </chapters>
+  </book>
+  <book ord="23" size="31">
+    <name_ru>Книга Притчей</name_ru>
+    <name_cs>Кни1га при1тчей соломHнихъ</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>Прит</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="33"/>
+      <chapter ord="2" size="22"/>
+      <chapter ord="3" size="35"/>
+      <chapter ord="4" size="29"/>
+      <chapter ord="5" size="23"/>
+      <chapter ord="6" size="35"/>
+      <chapter ord="7" size="27"/>
+      <chapter ord="8" size="36"/>
+      <chapter ord="9" size="18"/>
+      <chapter ord="10" size="32"/>
+      <chapter ord="11" size="31"/>
+      <chapter ord="12" size="28"/>
+      <chapter ord="13" size="26"/>
+      <chapter ord="14" size="35"/>
+      <chapter ord="15" size="33"/>
+      <chapter ord="16" size="33"/>
+      <chapter ord="17" size="28"/>
+      <chapter ord="18" size="25"/>
+      <chapter ord="19" size="29"/>
+      <chapter ord="20" size="30"/>
+      <chapter ord="21" size="31"/>
+      <chapter ord="22" size="29"/>
+      <chapter ord="23" size="35"/>
+      <chapter ord="24" size="34"/>
+      <chapter ord="25" size="29"/>
+      <chapter ord="26" size="28"/>
+      <chapter ord="27" size="27"/>
+      <chapter ord="28" size="28"/>
+      <chapter ord="29" size="27"/>
+      <chapter ord="30" size="33"/>
+      <chapter ord="31" size="32"/>
+    </chapters>
+  </book>
+  <book ord="24" size="12">
+    <name_ru>Екклезиаст</name_ru>
+    <name_cs>Кни1га є3кклесіaста</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>Еккл</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="18"/>
+      <chapter ord="2" size="26"/>
+      <chapter ord="3" size="22"/>
+      <chapter ord="4" size="17"/>
+      <chapter ord="5" size="19"/>
+      <chapter ord="6" size="11"/>
+      <chapter ord="7" size="30"/>
+      <chapter ord="8" size="17"/>
+      <chapter ord="9" size="18"/>
+      <chapter ord="10" size="20"/>
+      <chapter ord="11" size="10"/>
+      <chapter ord="12" size="14"/>
+    </chapters>
+  </book>
+  <book ord="25" size="8">
+    <name_ru>Песнь Песней</name_ru>
+    <name_cs>Пёснь пёсней</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>Песн</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="16"/>
+      <chapter ord="2" size="17"/>
+      <chapter ord="3" size="11"/>
+      <chapter ord="4" size="16"/>
+      <chapter ord="5" size="17"/>
+      <chapter ord="6" size="12"/>
+      <chapter ord="7" size="13"/>
+      <chapter ord="8" size="14"/>
+    </chapters>
+  </book>
+  <book ord="26" size="19">
+    <name_ru>Книга Премудрости</name_ru>
+    <name_cs>Кни1га премyдрости соломHни</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>Прем</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="16"/>
+      <chapter ord="2" size="24"/>
+      <chapter ord="3" size="19"/>
+      <chapter ord="4" size="20"/>
+      <chapter ord="5" size="24"/>
+      <chapter ord="6" size="27"/>
+      <chapter ord="7" size="30"/>
+      <chapter ord="8" size="21"/>
+      <chapter ord="9" size="19"/>
+      <chapter ord="10" size="21"/>
+      <chapter ord="11" size="27"/>
+      <chapter ord="12" size="28"/>
+      <chapter ord="13" size="19"/>
+      <chapter ord="14" size="31"/>
+      <chapter ord="15" size="19"/>
+      <chapter ord="16" size="29"/>
+      <chapter ord="17" size="20"/>
+      <chapter ord="18" size="25"/>
+      <chapter ord="19" size="21"/>
+    </chapters>
+  </book>
+  <book ord="27" size="51">
+    <name_ru>Книга Сираха</name_ru>
+    <name_cs>Кни1га ї}са, сн7а сірахова</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>Сир</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="30"/>
+      <chapter ord="2" size="18"/>
+      <chapter ord="3" size="31"/>
+      <chapter ord="4" size="35"/>
+      <chapter ord="5" size="18"/>
+      <chapter ord="6" size="37"/>
+      <chapter ord="7" size="39"/>
+      <chapter ord="8" size="22"/>
+      <chapter ord="9" size="23"/>
+      <chapter ord="10" size="34"/>
+      <chapter ord="11" size="34"/>
+      <chapter ord="12" size="18"/>
+      <chapter ord="13" size="32"/>
+      <chapter ord="14" size="27"/>
+      <chapter ord="15" size="20"/>
+      <chapter ord="16" size="31"/>
+      <chapter ord="17" size="31"/>
+      <chapter ord="18" size="33"/>
+      <chapter ord="19" size="28"/>
+      <chapter ord="20" size="31"/>
+      <chapter ord="21" size="31"/>
+      <chapter ord="22" size="31"/>
+      <chapter ord="23" size="37"/>
+      <chapter ord="24" size="37"/>
+      <chapter ord="25" size="29"/>
+      <chapter ord="26" size="27"/>
+      <chapter ord="27" size="33"/>
+      <chapter ord="28" size="30"/>
+      <chapter ord="29" size="31"/>
+      <chapter ord="30" size="27"/>
+      <chapter ord="31" size="37"/>
+      <chapter ord="32" size="25"/>
+      <chapter ord="33" size="33"/>
+      <chapter ord="34" size="26"/>
+      <chapter ord="35" size="23"/>
+      <chapter ord="36" size="29"/>
+      <chapter ord="37" size="34"/>
+      <chapter ord="38" size="39"/>
+      <chapter ord="39" size="42"/>
+      <chapter ord="40" size="32"/>
+      <chapter ord="41" size="29"/>
+      <chapter ord="42" size="26"/>
+      <chapter ord="43" size="36"/>
+      <chapter ord="44" size="27"/>
+      <chapter ord="45" size="31"/>
+      <chapter ord="46" size="23"/>
+      <chapter ord="47" size="31"/>
+      <chapter ord="48" size="28"/>
+      <chapter ord="49" size="18"/>
+      <chapter ord="50" size="31"/>
+      <chapter ord="51" size="38"/>
+    </chapters>
+  </book>
+  <book ord="28" size="66">
+    <name_ru>Книга пророка Исайи</name_ru>
+    <name_cs>Кни1га прор0ка и3сaіи</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>Ис</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="31"/>
+      <chapter ord="2" size="22"/>
+      <chapter ord="3" size="25"/>
+      <chapter ord="4" size="6"/>
+      <chapter ord="5" size="30"/>
+      <chapter ord="6" size="13"/>
+      <chapter ord="7" size="25"/>
+      <chapter ord="8" size="22"/>
+      <chapter ord="9" size="21"/>
+      <chapter ord="10" size="34"/>
+      <chapter ord="11" size="16"/>
+      <chapter ord="12" size="6"/>
+      <chapter ord="13" size="22"/>
+      <chapter ord="14" size="32"/>
+      <chapter ord="15" size="9"/>
+      <chapter ord="16" size="14"/>
+      <chapter ord="17" size="14"/>
+      <chapter ord="18" size="7"/>
+      <chapter ord="19" size="25"/>
+      <chapter ord="20" size="6"/>
+      <chapter ord="21" size="17"/>
+      <chapter ord="22" size="25"/>
+      <chapter ord="23" size="18"/>
+      <chapter ord="24" size="23"/>
+      <chapter ord="25" size="12"/>
+      <chapter ord="26" size="21"/>
+      <chapter ord="27" size="13"/>
+      <chapter ord="28" size="29"/>
+      <chapter ord="29" size="24"/>
+      <chapter ord="30" size="33"/>
+      <chapter ord="31" size="9"/>
+      <chapter ord="32" size="20"/>
+      <chapter ord="33" size="24"/>
+      <chapter ord="34" size="17"/>
+      <chapter ord="35" size="10"/>
+      <chapter ord="36" size="22"/>
+      <chapter ord="37" size="38"/>
+      <chapter ord="38" size="22"/>
+      <chapter ord="39" size="8"/>
+      <chapter ord="40" size="31"/>
+      <chapter ord="41" size="29"/>
+      <chapter ord="42" size="25"/>
+      <chapter ord="43" size="28"/>
+      <chapter ord="44" size="28"/>
+      <chapter ord="45" size="25"/>
+      <chapter ord="46" size="13"/>
+      <chapter ord="47" size="15"/>
+      <chapter ord="48" size="22"/>
+      <chapter ord="49" size="26"/>
+      <chapter ord="50" size="11"/>
+      <chapter ord="51" size="23"/>
+      <chapter ord="52" size="15"/>
+      <chapter ord="53" size="12"/>
+      <chapter ord="54" size="17"/>
+      <chapter ord="55" size="13"/>
+      <chapter ord="56" size="12"/>
+      <chapter ord="57" size="21"/>
+      <chapter ord="58" size="14"/>
+      <chapter ord="59" size="21"/>
+      <chapter ord="60" size="22"/>
+      <chapter ord="61" size="11"/>
+      <chapter ord="62" size="12"/>
+      <chapter ord="63" size="19"/>
+      <chapter ord="64" size="12"/>
+      <chapter ord="65" size="25"/>
+      <chapter ord="66" size="24"/>
+    </chapters>
+  </book>
+  <book ord="29" size="52">
+    <name_ru>Книга пророка Иеремии</name_ru>
+    <name_cs>Кни1га прор0ка їеремjи</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>Иер</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="19"/>
+      <chapter ord="2" size="37"/>
+      <chapter ord="3" size="25"/>
+      <chapter ord="4" size="31"/>
+      <chapter ord="5" size="31"/>
+      <chapter ord="6" size="30"/>
+      <chapter ord="7" size="34"/>
+      <chapter ord="8" size="22"/>
+      <chapter ord="9" size="26"/>
+      <chapter ord="10" size="25"/>
+      <chapter ord="11" size="23"/>
+      <chapter ord="12" size="17"/>
+      <chapter ord="13" size="27"/>
+      <chapter ord="14" size="22"/>
+      <chapter ord="15" size="21"/>
+      <chapter ord="16" size="21"/>
+      <chapter ord="17" size="27"/>
+      <chapter ord="18" size="23"/>
+      <chapter ord="19" size="15"/>
+      <chapter ord="20" size="18"/>
+      <chapter ord="21" size="14"/>
+      <chapter ord="22" size="30"/>
+      <chapter ord="23" size="40"/>
+      <chapter ord="24" size="10"/>
+      <chapter ord="25" size="38"/>
+      <chapter ord="26" size="24"/>
+      <chapter ord="27" size="22"/>
+      <chapter ord="28" size="17"/>
+      <chapter ord="29" size="32"/>
+      <chapter ord="30" size="24"/>
+      <chapter ord="31" size="40"/>
+      <chapter ord="32" size="44"/>
+      <chapter ord="33" size="26"/>
+      <chapter ord="34" size="22"/>
+      <chapter ord="35" size="19"/>
+      <chapter ord="36" size="32"/>
+      <chapter ord="37" size="21"/>
+      <chapter ord="38" size="28"/>
+      <chapter ord="39" size="18"/>
+      <chapter ord="40" size="16"/>
+      <chapter ord="41" size="18"/>
+      <chapter ord="42" size="22"/>
+      <chapter ord="43" size="13"/>
+      <chapter ord="44" size="30"/>
+      <chapter ord="45" size="5"/>
+      <chapter ord="46" size="28"/>
+      <chapter ord="47" size="7"/>
+      <chapter ord="48" size="47"/>
+      <chapter ord="49" size="39"/>
+      <chapter ord="50" size="46"/>
+      <chapter ord="51" size="64"/>
+      <chapter ord="52" size="34"/>
+    </chapters>
+  </book>
+  <book ord="30" size="5">
+    <name_ru>Плач Иеремии</name_ru>
+    <name_cs>Плaчь їеремjевъ</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>Плач</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="22"/>
+      <chapter ord="2" size="22"/>
+      <chapter ord="3" size="66"/>
+      <chapter ord="4" size="22"/>
+      <chapter ord="5" size="22"/>
+    </chapters>
+  </book>
+  <book ord="31" size="1">
+    <name_ru>Послание Иеремии</name_ru>
+    <name_cs>Послaніе їеремjино</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>ПослИер</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="72"/>
+    </chapters>
+  </book>
+  <book ord="32" size="5">
+    <name_ru>Книга пророка Варуха</name_ru>
+    <name_cs>Кни1га прbр0ка варyха</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>Вар</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="22"/>
+      <chapter ord="2" size="35"/>
+      <chapter ord="3" size="38"/>
+      <chapter ord="4" size="37"/>
+      <chapter ord="5" size="9"/>
+    </chapters>
+  </book>
+  <book ord="33" size="48">
+    <name_ru>Книга пророка Иезекииля</name_ru>
+    <name_cs>Кни1га прор0ка їезекjилz</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>Иез</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="28"/>
+      <chapter ord="2" size="10"/>
+      <chapter ord="3" size="27"/>
+      <chapter ord="4" size="17"/>
+      <chapter ord="5" size="17"/>
+      <chapter ord="6" size="14"/>
+      <chapter ord="7" size="27"/>
+      <chapter ord="8" size="18"/>
+      <chapter ord="9" size="11"/>
+      <chapter ord="10" size="22"/>
+      <chapter ord="11" size="25"/>
+      <chapter ord="12" size="28"/>
+      <chapter ord="13" size="23"/>
+      <chapter ord="14" size="23"/>
+      <chapter ord="15" size="8"/>
+      <chapter ord="16" size="63"/>
+      <chapter ord="17" size="24"/>
+      <chapter ord="18" size="32"/>
+      <chapter ord="19" size="14"/>
+      <chapter ord="20" size="49"/>
+      <chapter ord="21" size="32"/>
+      <chapter ord="22" size="31"/>
+      <chapter ord="23" size="49"/>
+      <chapter ord="24" size="27"/>
+      <chapter ord="25" size="17"/>
+      <chapter ord="26" size="21"/>
+      <chapter ord="27" size="36"/>
+      <chapter ord="28" size="26"/>
+      <chapter ord="29" size="21"/>
+      <chapter ord="30" size="26"/>
+      <chapter ord="31" size="18"/>
+      <chapter ord="32" size="32"/>
+      <chapter ord="33" size="33"/>
+      <chapter ord="34" size="31"/>
+      <chapter ord="35" size="15"/>
+      <chapter ord="36" size="38"/>
+      <chapter ord="37" size="28"/>
+      <chapter ord="38" size="23"/>
+      <chapter ord="39" size="29"/>
+      <chapter ord="40" size="49"/>
+      <chapter ord="41" size="26"/>
+      <chapter ord="42" size="20"/>
+      <chapter ord="43" size="27"/>
+      <chapter ord="44" size="31"/>
+      <chapter ord="45" size="25"/>
+      <chapter ord="46" size="24"/>
+      <chapter ord="47" size="23"/>
+      <chapter ord="48" size="35"/>
+    </chapters>
+  </book>
+  <book ord="34" size="14">
+    <name_ru>Книга пророка Даниила</name_ru>
+    <name_cs>Кни1га прор0ка даніи1ла</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>Дан</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="21"/>
+      <chapter ord="2" size="49"/>
+      <chapter ord="3" size="100"/>
+      <chapter ord="4" size="34"/>
+      <chapter ord="5" size="31"/>
+      <chapter ord="6" size="28"/>
+      <chapter ord="7" size="28"/>
+      <chapter ord="8" size="27"/>
+      <chapter ord="9" size="27"/>
+      <chapter ord="10" size="21"/>
+      <chapter ord="11" size="45"/>
+      <chapter ord="12" size="13"/>
+      <chapter ord="13" size="64"/>
+      <chapter ord="14" size="42"/>
+    </chapters>
+  </book>
+  <book ord="35" size="14">
+    <name_ru>Книга пророка Осии</name_ru>
+    <name_cs>Кни1га прbр0ка њсjи</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>Ос</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="11"/>
+      <chapter ord="2" size="23"/>
+      <chapter ord="3" size="5"/>
+      <chapter ord="4" size="19"/>
+      <chapter ord="5" size="15"/>
+      <chapter ord="6" size="11"/>
+      <chapter ord="7" size="16"/>
+      <chapter ord="8" size="14"/>
+      <chapter ord="9" size="17"/>
+      <chapter ord="10" size="15"/>
+      <chapter ord="11" size="12"/>
+      <chapter ord="12" size="14"/>
+      <chapter ord="13" size="15"/>
+      <chapter ord="14" size="10"/>
+    </chapters>
+  </book>
+  <book ord="36" size="3">
+    <name_ru>Книга пророка Иоиля</name_ru>
+    <name_cs>Кни1га прbр0ка їwи1лz</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>Иоил</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="20"/>
+      <chapter ord="2" size="32"/>
+      <chapter ord="3" size="21"/>
+    </chapters>
+  </book>
+  <book ord="37" size="9">
+    <name_ru>Книга пророка Амоса</name_ru>
+    <name_cs>Кни1га прbр0ка ґмHcа</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>Ам</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="15"/>
+      <chapter ord="2" size="16"/>
+      <chapter ord="3" size="15"/>
+      <chapter ord="4" size="13"/>
+      <chapter ord="5" size="27"/>
+      <chapter ord="6" size="14"/>
+      <chapter ord="7" size="17"/>
+      <chapter ord="8" size="14"/>
+      <chapter ord="9" size="15"/>
+    </chapters>
+  </book>
+  <book ord="38" size="1">
+    <name_ru>Книга пророка Авдия</name_ru>
+    <name_cs>Кни1га прbр0ка ґвдjа</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>Авд</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="21"/>
+    </chapters>
+  </book>
+  <book ord="39" size="4">
+    <name_ru>Книга пророка Ионы</name_ru>
+    <name_cs>Кни1га прbр0ка їHны</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>Ион</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="16"/>
+      <chapter ord="2" size="11"/>
+      <chapter ord="3" size="10"/>
+      <chapter ord="4" size="11"/>
+    </chapters>
+  </book>
+  <book ord="40" size="7">
+    <name_ru>Книга пророка Михея</name_ru>
+    <name_cs>Кни1га прbр0ка міхeа</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>Мих</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="16"/>
+      <chapter ord="2" size="13"/>
+      <chapter ord="3" size="12"/>
+      <chapter ord="4" size="13"/>
+      <chapter ord="5" size="15"/>
+      <chapter ord="6" size="16"/>
+      <chapter ord="7" size="20"/>
+    </chapters>
+  </book>
+  <book ord="41" size="3">
+    <name_ru>Книга пророка Наума</name_ru>
+    <name_cs>Кни1га прbр0ка наyма</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>Наум</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="15"/>
+      <chapter ord="2" size="13"/>
+      <chapter ord="3" size="19"/>
+    </chapters>
+  </book>
+  <book ord="42" size="3">
+    <name_ru>Книга пророка Аввакума</name_ru>
+    <name_cs>Кни1га прbр0ка ґввакyма</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>Ав</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="17"/>
+      <chapter ord="2" size="20"/>
+      <chapter ord="3" size="19"/>
+    </chapters>
+  </book>
+  <book ord="43" size="3">
+    <name_ru>Книга пророка Софонии</name_ru>
+    <name_cs>Кни1га прbр0ка соф0ніи</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>Соф</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="18"/>
+      <chapter ord="2" size="15"/>
+      <chapter ord="3" size="20"/>
+    </chapters>
+  </book>
+  <book ord="44" size="2">
+    <name_ru>Книга пророка Аггея</name_ru>
+    <name_cs>Кни1га прbр0ка ґггeа</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>Аг</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="14"/>
+      <chapter ord="2" size="24"/>
+    </chapters>
+  </book>
+  <book ord="45" size="14">
+    <name_ru>Книга пророка Захарии</name_ru>
+    <name_cs>Кни1га прbр0ка захaріи</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>Зах</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="21"/>
+      <chapter ord="2" size="13"/>
+      <chapter ord="3" size="10"/>
+      <chapter ord="4" size="14"/>
+      <chapter ord="5" size="11"/>
+      <chapter ord="6" size="15"/>
+      <chapter ord="7" size="14"/>
+      <chapter ord="8" size="23"/>
+      <chapter ord="9" size="17"/>
+      <chapter ord="10" size="12"/>
+      <chapter ord="11" size="17"/>
+      <chapter ord="12" size="14"/>
+      <chapter ord="13" size="9"/>
+      <chapter ord="14" size="21"/>
+    </chapters>
+  </book>
+  <book ord="46" size="4">
+    <name_ru>Книга пророка Малахии</name_ru>
+    <name_cs>Кни1га прbр0ка малахjи</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>Мал</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="14"/>
+      <chapter ord="2" size="17"/>
+      <chapter ord="3" size="18"/>
+      <chapter ord="4" size="6"/>
+    </chapters>
+  </book>
+  <book ord="47" size="16">
+    <name_ru>Первая книга Маккавейская</name_ru>
+    <name_cs>Кни1га пeрваz маккавеи1скаz</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>1Мак</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="64"/>
+      <chapter ord="2" size="70"/>
+      <chapter ord="3" size="60"/>
+      <chapter ord="4" size="61"/>
+      <chapter ord="5" size="68"/>
+      <chapter ord="6" size="63"/>
+      <chapter ord="7" size="50"/>
+      <chapter ord="8" size="32"/>
+      <chapter ord="9" size="73"/>
+      <chapter ord="10" size="89"/>
+      <chapter ord="11" size="74"/>
+      <chapter ord="12" size="54"/>
+      <chapter ord="13" size="53"/>
+      <chapter ord="14" size="49"/>
+      <chapter ord="15" size="41"/>
+      <chapter ord="16" size="24"/>
+    </chapters>
+  </book>
+  <book ord="48" size="15">
+    <name_ru>Вторая книга Маккавейская</name_ru>
+    <name_cs>Кни1га вторaz маккавеи1скаz</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>2Мак</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="36"/>
+      <chapter ord="2" size="33"/>
+      <chapter ord="3" size="40"/>
+      <chapter ord="4" size="50"/>
+      <chapter ord="5" size="27"/>
+      <chapter ord="6" size="31"/>
+      <chapter ord="7" size="42"/>
+      <chapter ord="8" size="36"/>
+      <chapter ord="9" size="29"/>
+      <chapter ord="10" size="38"/>
+      <chapter ord="11" size="38"/>
+      <chapter ord="12" size="46"/>
+      <chapter ord="13" size="26"/>
+      <chapter ord="14" size="46"/>
+      <chapter ord="15" size="40"/>
+    </chapters>
+  </book>
+  <book ord="49" size="7">
+    <name_ru>Третья книга Маккавейская</name_ru>
+    <name_cs>Кни1га трeтіz маккавеи1скаz</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>3Мак</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="25"/>
+      <chapter ord="2" size="25"/>
+      <chapter ord="3" size="22"/>
+      <chapter ord="4" size="16"/>
+      <chapter ord="5" size="36"/>
+      <chapter ord="6" size="37"/>
+      <chapter ord="7" size="20"/>
+    </chapters>
+  </book>
+  <book ord="50" size="16">
+    <name_ru>Третья книга Ездры</name_ru>
+    <name_cs>Кни1га трeтіz е4здры</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>3Езд</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="40"/>
+      <chapter ord="2" size="48"/>
+      <chapter ord="3" size="36"/>
+      <chapter ord="4" size="52"/>
+      <chapter ord="5" size="56"/>
+      <chapter ord="6" size="59"/>
+      <chapter ord="7" size="70"/>
+      <chapter ord="8" size="63"/>
+      <chapter ord="9" size="47"/>
+      <chapter ord="10" size="60"/>
+      <chapter ord="11" size="46"/>
+      <chapter ord="12" size="51"/>
+      <chapter ord="13" size="58"/>
+      <chapter ord="14" size="48"/>
+      <chapter ord="15" size="63"/>
+      <chapter ord="16" size="79"/>
+    </chapters>
+  </book>
+  <book ord="51" size="28">
+    <name_ru>Евангелие от Матфея</name_ru>
+    <name_cs>T матfeа с™0е бlговэствовaніе</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>Мф</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="25"/>
+      <chapter ord="2" size="23"/>
+      <chapter ord="3" size="17"/>
+      <chapter ord="4" size="25"/>
+      <chapter ord="5" size="48"/>
+      <chapter ord="6" size="34"/>
+      <chapter ord="7" size="29"/>
+      <chapter ord="8" size="34"/>
+      <chapter ord="9" size="38"/>
+      <chapter ord="10" size="42"/>
+      <chapter ord="11" size="30"/>
+      <chapter ord="12" size="50"/>
+      <chapter ord="13" size="58"/>
+      <chapter ord="14" size="36"/>
+      <chapter ord="15" size="39"/>
+      <chapter ord="16" size="28"/>
+      <chapter ord="17" size="27"/>
+      <chapter ord="18" size="35"/>
+      <chapter ord="19" size="30"/>
+      <chapter ord="20" size="34"/>
+      <chapter ord="21" size="46"/>
+      <chapter ord="22" size="46"/>
+      <chapter ord="23" size="39"/>
+      <chapter ord="24" size="51"/>
+      <chapter ord="25" size="46"/>
+      <chapter ord="26" size="75"/>
+      <chapter ord="27" size="66"/>
+      <chapter ord="28" size="20"/>
+    </chapters>
+  </book>
+  <book ord="52" size="16">
+    <name_ru>Евангелие от Марка</name_ru>
+    <name_cs>T мaрка с™0е бlговэствовaніе</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>Мк</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="45"/>
+      <chapter ord="2" size="28"/>
+      <chapter ord="3" size="35"/>
+      <chapter ord="4" size="41"/>
+      <chapter ord="5" size="43"/>
+      <chapter ord="6" size="56"/>
+      <chapter ord="7" size="37"/>
+      <chapter ord="8" size="38"/>
+      <chapter ord="9" size="50"/>
+      <chapter ord="10" size="52"/>
+      <chapter ord="11" size="33"/>
+      <chapter ord="12" size="44"/>
+      <chapter ord="13" size="37"/>
+      <chapter ord="14" size="72"/>
+      <chapter ord="15" size="47"/>
+      <chapter ord="16" size="20"/>
+    </chapters>
+  </book>
+  <book ord="53" size="24">
+    <name_ru>Евангелие от Луки</name_ru>
+    <name_cs>T луки2 с™0е бlговэствовaніе</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>Лк</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="80"/>
+      <chapter ord="2" size="52"/>
+      <chapter ord="3" size="38"/>
+      <chapter ord="4" size="44"/>
+      <chapter ord="5" size="39"/>
+      <chapter ord="6" size="49"/>
+      <chapter ord="7" size="50"/>
+      <chapter ord="8" size="56"/>
+      <chapter ord="9" size="62"/>
+      <chapter ord="10" size="42"/>
+      <chapter ord="11" size="54"/>
+      <chapter ord="12" size="59"/>
+      <chapter ord="13" size="35"/>
+      <chapter ord="14" size="35"/>
+      <chapter ord="15" size="32"/>
+      <chapter ord="16" size="31"/>
+      <chapter ord="17" size="37"/>
+      <chapter ord="18" size="43"/>
+      <chapter ord="19" size="48"/>
+      <chapter ord="20" size="47"/>
+      <chapter ord="21" size="38"/>
+      <chapter ord="22" size="71"/>
+      <chapter ord="23" size="56"/>
+      <chapter ord="24" size="53"/>
+    </chapters>
+  </book>
+  <book ord="54" size="21">
+    <name_ru>Евангелие от Иоанна</name_ru>
+    <name_cs>T їwaнна с™0е бlговэствовaніе</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>Ин</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="51"/>
+      <chapter ord="2" size="25"/>
+      <chapter ord="3" size="36"/>
+      <chapter ord="4" size="54"/>
+      <chapter ord="5" size="47"/>
+      <chapter ord="6" size="71"/>
+      <chapter ord="7" size="53"/>
+      <chapter ord="8" size="59"/>
+      <chapter ord="9" size="41"/>
+      <chapter ord="10" size="42"/>
+      <chapter ord="11" size="57"/>
+      <chapter ord="12" size="50"/>
+      <chapter ord="13" size="38"/>
+      <chapter ord="14" size="31"/>
+      <chapter ord="15" size="27"/>
+      <chapter ord="16" size="33"/>
+      <chapter ord="17" size="26"/>
+      <chapter ord="18" size="40"/>
+      <chapter ord="19" size="42"/>
+      <chapter ord="20" size="31"/>
+      <chapter ord="21" size="25"/>
+    </chapters>
+  </book>
+  <book ord="55" size="28">
+    <name_ru>Деяния апостолов</name_ru>
+    <name_cs>Дэ‰ніz с™hхъ ґпcлъ</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>Деян</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="26"/>
+      <chapter ord="2" size="47"/>
+      <chapter ord="3" size="26"/>
+      <chapter ord="4" size="37"/>
+      <chapter ord="5" size="42"/>
+      <chapter ord="6" size="15"/>
+      <chapter ord="7" size="60"/>
+      <chapter ord="8" size="40"/>
+      <chapter ord="9" size="43"/>
+      <chapter ord="10" size="48"/>
+      <chapter ord="11" size="30"/>
+      <chapter ord="12" size="25"/>
+      <chapter ord="13" size="52"/>
+      <chapter ord="14" size="28"/>
+      <chapter ord="15" size="41"/>
+      <chapter ord="16" size="40"/>
+      <chapter ord="17" size="34"/>
+      <chapter ord="18" size="28"/>
+      <chapter ord="19" size="40"/>
+      <chapter ord="20" size="38"/>
+      <chapter ord="21" size="40"/>
+      <chapter ord="22" size="30"/>
+      <chapter ord="23" size="35"/>
+      <chapter ord="24" size="27"/>
+      <chapter ord="25" size="27"/>
+      <chapter ord="26" size="32"/>
+      <chapter ord="27" size="44"/>
+      <chapter ord="28" size="31"/>
+    </chapters>
+  </book>
+  <book ord="56" size="5">
+    <name_ru>Послание Иакова</name_ru>
+    <name_cs>Собо'рное посла'нiе i=а'кwвле</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>Иак</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="27"/>
+      <chapter ord="2" size="26"/>
+      <chapter ord="3" size="18"/>
+      <chapter ord="4" size="17"/>
+      <chapter ord="5" size="20"/>
+    </chapters>
+  </book>
+  <book ord="57" size="5">
+    <name_ru>1-е послание Петра</name_ru>
+    <name_cs>Соб0рное послaніе пeрвое с™aгw ґпcла петрA</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>1Пет</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="25"/>
+      <chapter ord="2" size="25"/>
+      <chapter ord="3" size="22"/>
+      <chapter ord="4" size="19"/>
+      <chapter ord="5" size="14"/>
+    </chapters>
+  </book>
+  <book ord="58" size="3">
+    <name_ru>2-е послание Петра</name_ru>
+    <name_cs>Соб0рное послaніе втор0е с™aгw ґпcла петрA</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>2Пет</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="21"/>
+      <chapter ord="2" size="22"/>
+      <chapter ord="3" size="18"/>
+    </chapters>
+  </book>
+  <book ord="59" size="5">
+    <name_ru>1-е послание Иоанна</name_ru>
+    <name_cs>Соб0рное послaніе пeрвое с™aгw ґпcла їwaнна бGосл0ва</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>1Ин</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="10"/>
+      <chapter ord="2" size="29"/>
+      <chapter ord="3" size="24"/>
+      <chapter ord="4" size="21"/>
+      <chapter ord="5" size="21"/>
+    </chapters>
+  </book>
+  <book ord="60" size="1">
+    <name_ru>2-е послание Иоанна</name_ru>
+    <name_cs>Соб0рное послaніе втор0е с™aгw ґпcла їwaнна бGосл0ва</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>2Ин</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="13"/>
+    </chapters>
+  </book>
+  <book ord="61" size="1">
+    <name_ru>3-е послание Иоанна</name_ru>
+    <name_cs>Соб0рное послaніе трeтіе с™aгw ґпcла їwaнна бGосл0ва</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>3Ин</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="15"/>
+    </chapters>
+  </book>
+  <book ord="62" size="1">
+    <name_ru>Послание Иуды</name_ru>
+    <name_cs>Соб0рное послaніе їyдино</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>Иуд</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="25"/>
+    </chapters>
+  </book>
+  <book ord="63" size="16">
+    <name_ru>Послание к Римлянам</name_ru>
+    <name_cs>Послaніе къ ри1млzнwмъ с™aго ґпcла пavла</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>Рим</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="32"/>
+      <chapter ord="2" size="29"/>
+      <chapter ord="3" size="31"/>
+      <chapter ord="4" size="25"/>
+      <chapter ord="5" size="21"/>
+      <chapter ord="6" size="23"/>
+      <chapter ord="7" size="25"/>
+      <chapter ord="8" size="39"/>
+      <chapter ord="9" size="33"/>
+      <chapter ord="10" size="21"/>
+      <chapter ord="11" size="36"/>
+      <chapter ord="12" size="21"/>
+      <chapter ord="13" size="14"/>
+      <chapter ord="14" size="26"/>
+      <chapter ord="15" size="33"/>
+      <chapter ord="16" size="24"/>
+    </chapters>
+  </book>
+  <book ord="64" size="16">
+    <name_ru>1-е послание к Коринфянам</name_ru>
+    <name_cs>Пeрвое послaніе къ корjнfzнwмъ с™aгw ґпcла пavла</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>1Кор</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="31"/>
+      <chapter ord="2" size="16"/>
+      <chapter ord="3" size="23"/>
+      <chapter ord="4" size="21"/>
+      <chapter ord="5" size="13"/>
+      <chapter ord="6" size="20"/>
+      <chapter ord="7" size="40"/>
+      <chapter ord="8" size="13"/>
+      <chapter ord="9" size="27"/>
+      <chapter ord="10" size="33"/>
+      <chapter ord="11" size="34"/>
+      <chapter ord="12" size="31"/>
+      <chapter ord="13" size="13"/>
+      <chapter ord="14" size="40"/>
+      <chapter ord="15" size="58"/>
+      <chapter ord="16" size="24"/>
+    </chapters>
+  </book>
+  <book ord="65" size="13">
+    <name_ru>2-е послание к Коринфянам</name_ru>
+    <name_cs>Втор0е послaніе къ корjнfzнwмъ с™aгw ґпcла пavла</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>2Кор</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="24"/>
+      <chapter ord="2" size="17"/>
+      <chapter ord="3" size="18"/>
+      <chapter ord="4" size="18"/>
+      <chapter ord="5" size="21"/>
+      <chapter ord="6" size="18"/>
+      <chapter ord="7" size="16"/>
+      <chapter ord="8" size="24"/>
+      <chapter ord="9" size="15"/>
+      <chapter ord="10" size="18"/>
+      <chapter ord="11" size="32"/>
+      <chapter ord="12" size="21"/>
+      <chapter ord="13" size="13"/>
+    </chapters>
+  </book>
+  <book ord="66" size="6">
+    <name_ru>Послание к Галатам</name_ru>
+    <name_cs>Послaніе къ галaтwмъ с™aгw ґпcла пavла</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>Гал</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="24"/>
+      <chapter ord="2" size="21"/>
+      <chapter ord="3" size="29"/>
+      <chapter ord="4" size="31"/>
+      <chapter ord="5" size="26"/>
+      <chapter ord="6" size="18"/>
+    </chapters>
+  </book>
+  <book ord="67" size="6">
+    <name_ru>Послание к Ефесянам</name_ru>
+    <name_cs>Послaніе ко є3фесeємъ с™aгw ґпcла пavла</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>Еф</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="23"/>
+      <chapter ord="2" size="22"/>
+      <chapter ord="3" size="21"/>
+      <chapter ord="4" size="32"/>
+      <chapter ord="5" size="33"/>
+      <chapter ord="6" size="24"/>
+    </chapters>
+  </book>
+  <book ord="68" size="4">
+    <name_ru>Послание к Филиппийцам</name_ru>
+    <name_cs>Послaніе къ філіпписjємъ с™aгw ґпcла пavла</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>Флп</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="30"/>
+      <chapter ord="2" size="30"/>
+      <chapter ord="3" size="21"/>
+      <chapter ord="4" size="23"/>
+    </chapters>
+  </book>
+  <book ord="69" size="4">
+    <name_ru>Послание к Колоссянам</name_ru>
+    <name_cs>Послaніе къ колоссaємъ с™aгw ґпcла пavла</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>Кол</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="29"/>
+      <chapter ord="2" size="23"/>
+      <chapter ord="3" size="25"/>
+      <chapter ord="4" size="18"/>
+    </chapters>
+  </book>
+  <book ord="70" size="5">
+    <name_ru>1-е послание к Фесалоникийцам</name_ru>
+    <name_cs>Послaніе пeрвое къ солyнzнwмъ с™aгw ґпcла пavла</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>1Фес</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="10"/>
+      <chapter ord="2" size="20"/>
+      <chapter ord="3" size="13"/>
+      <chapter ord="4" size="18"/>
+      <chapter ord="5" size="28"/>
+    </chapters>
+  </book>
+  <book ord="71" size="3">
+    <name_ru>2-е послание к Фесалоникийцам</name_ru>
+    <name_cs>Послaніе втор0е къ солyнzнwмъ с™aгw ґпcла пavла</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>2Фес</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="12"/>
+      <chapter ord="2" size="17"/>
+      <chapter ord="3" size="18"/>
+    </chapters>
+  </book>
+  <book ord="72" size="6">
+    <name_ru>1-е послание к Тимофею</name_ru>
+    <name_cs>Послaніе пeрвое къ тімоfeю с™aгw ґпcла пavла</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>1Тим</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="20"/>
+      <chapter ord="2" size="15"/>
+      <chapter ord="3" size="16"/>
+      <chapter ord="4" size="16"/>
+      <chapter ord="5" size="25"/>
+      <chapter ord="6" size="21"/>
+    </chapters>
+  </book>
+  <book ord="73" size="4">
+    <name_ru>2-е послание к Тимофею</name_ru>
+    <name_cs>Послaніе втор0е къ тімоfeю с™aгw ґпcла пavла</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>2Тим</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="18"/>
+      <chapter ord="2" size="26"/>
+      <chapter ord="3" size="17"/>
+      <chapter ord="4" size="22"/>
+    </chapters>
+  </book>
+  <book ord="74" size="3">
+    <name_ru>Послание к Титу</name_ru>
+    <name_cs>Послaніе къ тjту с™aгw ґпcла пavла</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>Тит</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="16"/>
+      <chapter ord="2" size="15"/>
+      <chapter ord="3" size="15"/>
+    </chapters>
+  </book>
+  <book ord="75" size="1">
+    <name_ru>Послание к Филимону</name_ru>
+    <name_cs>Послaніе къ філим0ну с™aгw ґпcла пavла</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>Флм</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="25"/>
+    </chapters>
+  </book>
+  <book ord="76" size="13">
+    <name_ru>Послание к Евреям</name_ru>
+    <name_cs>Послaніе ко є3врeємъ с™aгw ґпcла пavла</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>Евр</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="14"/>
+      <chapter ord="2" size="18"/>
+      <chapter ord="3" size="19"/>
+      <chapter ord="4" size="16"/>
+      <chapter ord="5" size="14"/>
+      <chapter ord="6" size="20"/>
+      <chapter ord="7" size="28"/>
+      <chapter ord="8" size="13"/>
+      <chapter ord="9" size="28"/>
+      <chapter ord="10" size="39"/>
+      <chapter ord="11" size="40"/>
+      <chapter ord="12" size="29"/>
+      <chapter ord="13" size="25"/>
+    </chapters>
+  </book>
+  <book ord="77" size="22">
+    <name_ru>Откровение</name_ru>
+    <name_cs>Ґпокaлmpісъ с™aгw їwaнна бGосл0ва</name_cs>
+    <chapname_ru>Глава</chapname_ru>
+    <chapname_cs>ГлавA</chapname_cs>
+    <shortname_ru>Откр</shortname_ru>
+    <chapters>
+      <chapter ord="1" size="20"/>
+      <chapter ord="2" size="29"/>
+      <chapter ord="3" size="22"/>
+      <chapter ord="4" size="11"/>
+      <chapter ord="5" size="14"/>
+      <chapter ord="6" size="17"/>
+      <chapter ord="7" size="17"/>
+      <chapter ord="8" size="13"/>
+      <chapter ord="9" size="21"/>
+      <chapter ord="10" size="11"/>
+      <chapter ord="11" size="19"/>
+      <chapter ord="12" size="17"/>
+      <chapter ord="13" size="18"/>
+      <chapter ord="14" size="20"/>
+      <chapter ord="15" size="8"/>
+      <chapter ord="16" size="21"/>
+      <chapter ord="17" size="18"/>
+      <chapter ord="18" size="24"/>
+      <chapter ord="19" size="21"/>
+      <chapter ord="20" size="15"/>
+      <chapter ord="21" size="27"/>
+      <chapter ord="22" size="21"/>
+    </chapters>
+  </book>
+</books>
