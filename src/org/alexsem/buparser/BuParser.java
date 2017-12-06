@@ -182,8 +182,13 @@ public class BuParser {
         link = link.replaceAll("Сол\\.", "Фес.");
         link = link.replaceAll("Притч\\.", "Прит.");
         link = link.replaceAll(" \\(Недели \\d{1,2}-й\\)", "").trim();
-        link = link.replaceAll("(\\d\\d)\\d\\d\\d", "$1");
+        link = link.replaceAll("(\\d{2})\\d{2,3}", "$1");
+        link = link.replaceAll(" \\(о Закхее\\)", "");
+        link = link.replaceAll(" \\(о хананеянке\\)", "");
         link = link.replaceAll("; ", ", ");
+        if (link.endsWith(";") || link.endsWith(".") || link.endsWith(",")) {
+            link = link.substring(0, link.length() - 1);
+        }
         Matcher romanMatcher = PATTERN_ROMAN.matcher(link);
         while (romanMatcher.find()) {
             String numbers = link.substring(romanMatcher.end()).replaceAll("(\\d), (\\d)", "$1,$2");
@@ -299,7 +304,16 @@ public class BuParser {
             throw new Exception("Not every reading found (nbsp): " + readings);
         }
         if (result.size() != numberOfPericopes) {
-            throw new Exception("Not every reading found (pericope): " + readings);
+            for (Line line : result) {
+                LocationSet locationSet = LocationCalculator.parseSearchString(metadata, line.getLink());
+                Location location = locationSet.getLocations().get(0);
+                if (location.getBook() <= 50) { //Old Testament
+                    numberOfPericopes++;
+                }
+            }
+            if (result.size() != numberOfPericopes) {
+                throw new Exception("Not every reading found (pericope): " + readings);
+            }
         }
 
         return result;
@@ -316,7 +330,7 @@ public class BuParser {
         new File(String.format(PATH_DIRECTORY, year)).mkdirs();
         int errorCount = 0;
         Calendar currentDay = Calendar.getInstance();
-        currentDay.set(year, Calendar.FEBRUARY, 14);
+        currentDay.set(year, Calendar.JANUARY, 1);
 
         //--- Run entry loop ---
         while (currentDay.get(Calendar.YEAR) == year) {
@@ -369,7 +383,7 @@ public class BuParser {
             info.append(currentEntry.isHoliday() ? '1' : '0');
             info.append('0');
             currentDay.add(Calendar.DAY_OF_YEAR, 1);
-            break; //TODO remove
+//            break; //TODO remove
         }
 
         //--- Save info file ---
