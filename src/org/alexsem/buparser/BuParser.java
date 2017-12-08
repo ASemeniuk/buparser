@@ -46,7 +46,7 @@ public class BuParser {
 
     private static final Pattern PATTERN_TITLE = Pattern.compile("Версия для печати.*?<br> *?<p> *?<b>(.*?)</p>");
     private static final Pattern PATTERN_READINGS = Pattern.compile("<div class=\"read\">(.*?)</div> *?<div class");
-    private static final Pattern PATTERN_READING = Pattern.compile("([^<]*?)[,:\\-]? *?<a.*?>([^<]*?)[\\.,]?</a>( *?<div.*?</div>)? *?\\&nbsp;");
+    private static final Pattern PATTERN_READING = Pattern.compile("([^<]*?)[,:\\-]? *?<a.*?>([^<]*?)[\\.,]?</a>( *?<div.*?</div>)? *?");
     private static final Pattern PATTERN_ROMAN = Pattern.compile("([IVXLCDM]+), ");
     private static final Pattern PATTERN_COMMENT_SEPARATOR = Pattern.compile("\\d\\.");
     private static final Pattern PATTERN_COMMENT_LEFT = Pattern.compile("(.*?)[,:\\-]? *?(([123] )?[А-Я][а-я]+?\\.,.*\\d)\\.?");
@@ -181,6 +181,7 @@ public class BuParser {
         link = link.replaceAll("^(\\d) ([А-Яа-я])", "$1$2");
         link = link.replaceAll("Сол\\.", "Фес.");
         link = link.replaceAll("Притч\\.", "Прит.");
+        link = link.replaceAll("Прем\\. Солом\\.", "Прем.");
         link = link.replaceAll(" \\(Недели \\d{1,2}-й\\)", "").trim();
         link = link.replaceAll("(\\d{2})\\d{2,3}", "$1");
         link = link.replaceAll(" \\(о Закхее\\)", "");
@@ -266,38 +267,41 @@ public class BuParser {
         }
         int numberOfNbspsCalc = (readings.length() - readings.replaceAll(Pattern.quote("&nbsp;"), "").length()) / "&nbsp;".length();
         int numberOfPericopes = (readings.length() - readings.replaceAll(Pattern.quote("зач."), "").length()) / "зач.".length();
-        Matcher readingMatcher = PATTERN_READING.matcher(readings);
         String lastComment = "";
         int numberOfNbspsEmp = 0;
-        while (readingMatcher.find()) {
-            String link = readingMatcher.group(2).trim();
-            link = beautifyLink(link);
-            String comment = readingMatcher.group(1).trim();
+        for (String nbspPart : readings.split("\\&nbsp;")) {
+            Matcher readingMatcher = PATTERN_READING.matcher(nbspPart);
+            if (readingMatcher.matches()) {
+                String link = readingMatcher.group(2).trim();
+                link = beautifyLink(link);
+                String comment = readingMatcher.group(1).trim();
 
-            Matcher substituteMatcher = PATTERN_SUBSTITUTE.matcher(comment);
-            if (substituteMatcher.matches()) {
-                String subLink = substituteMatcher.group(1);
-                subLink = beautifyLink(subLink);
-                result.add(new Line(subLink, lastComment));
-                comment = substituteMatcher.group(2);
-            }
-
-            if (PATTERN_ROMAN.matcher(comment).find()) {
-                List<Line> lines = extractLinesFromComment(comment);
-                lines.get(lines.size() - 1).setLink(link);
-                lastComment = lines.get(lines.size() - 1).getComment();
-                result.addAll(lines);
-                numberOfNbspsEmp++;
-            } else {
-                if (comment.isEmpty()) {
-                    comment = lastComment;
-                } else {
-                    lastComment = comment;
+                Matcher substituteMatcher = PATTERN_SUBSTITUTE.matcher(comment);
+                if (substituteMatcher.matches()) {
+                    String subLink = substituteMatcher.group(1);
+                    subLink = beautifyLink(subLink);
+                    result.add(new Line(subLink, lastComment));
+                    comment = substituteMatcher.group(2);
                 }
+
+                if (PATTERN_ROMAN.matcher(comment).find()) {
+                    List<Line> lines = extractLinesFromComment(comment);
+                    lines.get(lines.size() - 1).setLink(link);
+                    lastComment = lines.get(lines.size() - 1).getComment();
+                    result.addAll(lines);
+                } else {
+                    if (comment.isEmpty()) {
+                        comment = lastComment;
+                    } else {
+                        lastComment = comment;
+                    }
 //            System.out.println("Link: " + link + " Comment: " + comment); //TODO remove
 
-                result.add(new Line(link, comment));
-                numberOfNbspsEmp++;
+                    result.add(new Line(link, comment));
+                }
+            numberOfNbspsEmp++;
+            } else {
+                throw new Exception("NBSP part does not match: " + nbspPart);
             }
         }
         if (numberOfNbspsCalc != numberOfNbspsEmp) {
@@ -314,6 +318,9 @@ public class BuParser {
             if (result.size() != numberOfPericopes) {
                 throw new Exception("Not every reading found (pericope): " + readings);
             }
+        }
+        if (result.isEmpty()) {
+            throw new Exception("Zero readings");
         }
 
         return result;
