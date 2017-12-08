@@ -176,6 +176,7 @@ public class BuParser {
     //==========================================================================
     private static String beautifyLink(String link) throws Exception {
         link = link.replaceAll("последи\\&#769;", "");
+        link = link.replaceAll(", *?\\d+-\\d+ зач\\.( \\(от полу&#769;\\))? *?,", "");
         link = link.replaceAll(", *?\\d+ зач\\.( \\(от полу&#769;\\))? *?,", "");
         link = link.replaceAll("\\*", "");
         link = link.replaceAll("^(\\d) ([А-Яа-я])", "$1$2");
@@ -299,7 +300,16 @@ public class BuParser {
 
                     result.add(new Line(link, comment));
                 }
-            numberOfNbspsEmp++;
+                numberOfNbspsEmp++;
+            } else if (PATTERN_ROMAN.matcher(nbspPart).find()) {
+                Line line = splitLineAndComment(nbspPart);
+                if (line.getComment().isEmpty()) {
+                    line.setComment(lastComment);
+                } else {
+                    lastComment = line.getComment();
+                }
+                result.add(line);
+                numberOfNbspsEmp++;
             } else {
                 throw new Exception("NBSP part does not match: " + nbspPart);
             }
@@ -337,7 +347,7 @@ public class BuParser {
         new File(String.format(PATH_DIRECTORY, year)).mkdirs();
         int errorCount = 0;
         Calendar currentDay = Calendar.getInstance();
-        currentDay.set(year, Calendar.JANUARY, 1);
+        currentDay.set(year, Calendar.FEBRUARY, 5);
 
         //--- Run entry loop ---
         while (currentDay.get(Calendar.YEAR) == year) {
@@ -390,7 +400,7 @@ public class BuParser {
             info.append(currentEntry.isHoliday() ? '1' : '0');
             info.append('0');
             currentDay.add(Calendar.DAY_OF_YEAR, 1);
-//            break; //TODO remove
+            break; //TODO remove
         }
 
         //--- Save info file ---
