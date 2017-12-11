@@ -3,8 +3,6 @@ package org.alexsem.buparser;
 import org.alexsem.buparser.util.RomanNumbers;
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -12,18 +10,11 @@ import java.io.PrintWriter;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.nio.file.attribute.BasicFileAttributes;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Collection;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import org.alexsem.buparser.CalendarEntry.Line;
@@ -33,7 +24,6 @@ import org.alexsem.buparser.model.LocationSet;
 import org.alexsem.buparser.model.Metadata;
 import org.alexsem.buparser.util.LocationCalculator;
 import org.alexsem.buparser.util.XMLParser;
-import org.xmlpull.v1.XmlPullParserException;
 
 public class BuParser {
 
@@ -47,6 +37,7 @@ public class BuParser {
     private static final Pattern PATTERN_TITLE = Pattern.compile("Версия для печати.*?<br> *?<p> *?<b>(.*?)</p>");
     private static final Pattern PATTERN_READINGS = Pattern.compile("<div class=\"read\">(.*?)</div> *?<div class");
     private static final Pattern PATTERN_READING = Pattern.compile("([^<]*?)[,:\\-]? *?<a.*?>([^<]*?)[\\.,]?</a>( *?<div.*?</div>)? *?");
+    private static final Pattern PATTERN_DOUBLE_LINE = Pattern.compile("((.*?)[,:\\-]? *?(([123] )?[А-Я][а-я]+?\\.,.*?\\d)\\.?){2}");
     private static final Pattern PATTERN_ROMAN = Pattern.compile("([IVXLCDM]+), ");
     private static final Pattern PATTERN_COMMENT_SEPARATOR = Pattern.compile("\\d\\.");
     private static final Pattern PATTERN_COMMENT_LEFT = Pattern.compile("(.*?)[,:\\-]? *?(([123] )?[А-Я][а-я]+?\\.,.*\\d)\\.?");
@@ -221,6 +212,10 @@ public class BuParser {
 
     //==========================================================================
     private static List<Line> extractLinesFromComment(String data) throws Exception {
+        if (data.endsWith(";")) {
+            data = data.substring(0, data.length() - 1) + ".";
+        }
+        data = data.replaceAll(" ?Ев\\. составное:? ?", "");
         List<Line> lines = new ArrayList<>();
         Matcher separator = PATTERN_COMMENT_SEPARATOR.matcher(data);
         if (separator.find()) {
@@ -271,8 +266,22 @@ public class BuParser {
         String lastComment = "";
         int numberOfNbspsEmp = 0;
         for (String nbspPart : readings.split("\\&nbsp;")) {
+            
+            if (PATTERN_DOUBLE_LINE.matcher(nbspPart).matches()) { //2 lines in one nbsp part
+                Matcher separator = PATTERN_COMMENT_SEPARATOR.matcher(nbspPart);
+                if (separator.find()) {
+                    String left = nbspPart.substring(0, separator.end());
+                    String right = nbspPart.substring(separator.end() + 1).trim();
+                    result.add(splitLineAndComment(left));
+                    result.add(splitLineAndComment(right));
+                    numberOfNbspsEmp++;
+                    continue;
+                }
+            }
+            
             Matcher readingMatcher = PATTERN_READING.matcher(nbspPart);
             if (readingMatcher.matches()) {
+
                 String link = readingMatcher.group(2).trim();
                 link = beautifyLink(link);
                 String comment = readingMatcher.group(1).trim();
@@ -282,7 +291,7 @@ public class BuParser {
                     String subLink = substituteMatcher.group(1);
                     subLink = beautifyLink(subLink);
                     result.add(new Line(subLink, lastComment));
-                    comment = substituteMatcher.group(2);
+                    comment = substituteMatcher.group(2).trim();
                 }
 
                 if (PATTERN_ROMAN.matcher(comment).find()) {
@@ -335,8 +344,8 @@ public class BuParser {
 
         return result;
     }
-
     //==========================================================================
+
     private static void parseYear(int year) {
         //--- Determine holidays list ---
         List<String> holidays = getDynamicHolidaysForYear(year);
@@ -347,7 +356,7 @@ public class BuParser {
         new File(String.format(PATH_DIRECTORY, year)).mkdirs();
         int errorCount = 0;
         Calendar currentDay = Calendar.getInstance();
-        currentDay.set(year, Calendar.FEBRUARY, 5);
+        currentDay.set(year, Calendar.FEBRUARY, 24);
 
         //--- Run entry loop ---
         while (currentDay.get(Calendar.YEAR) == year) {
