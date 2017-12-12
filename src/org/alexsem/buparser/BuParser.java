@@ -255,7 +255,11 @@ public class BuParser {
         String readings = "";
         Matcher readingsMatcher = PATTERN_READINGS.matcher(readingsData);
         if (readingsMatcher.find()) {
-            readings = readingsMatcher.group(1).trim() + "&nbsp;";
+            readings = readingsMatcher.group(1).trim();
+            if (readings.endsWith("&nbsp;")) {
+                readings = readings.substring(0, readings.length() - "&nbsp;".length()).trim();
+            }
+            readings = readings + "&nbsp;";
         }
 //            System.out.println(readings); //TODO remove
         if (readings.length() == 0) {
@@ -356,7 +360,7 @@ public class BuParser {
         new File(String.format(PATH_DIRECTORY, year)).mkdirs();
         int errorCount = 0;
         Calendar currentDay = Calendar.getInstance();
-        currentDay.set(year, Calendar.FEBRUARY, 24);
+        currentDay.set(year, Calendar.SEPTEMBER, 8);
 
         //--- Run entry loop ---
         while (currentDay.get(Calendar.YEAR) == year) {
