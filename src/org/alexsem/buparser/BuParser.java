@@ -42,6 +42,8 @@ public class BuParser {
     private static final Pattern PATTERN_COMMENT_SEPARATOR = Pattern.compile("\\d\\.");
     private static final Pattern PATTERN_COMMENT_LEFT = Pattern.compile("(.*?)[,:\\-]? *?(([123] )?[А-Я][а-я]+?\\.,.*\\d)\\.?");
     private static final Pattern PATTERN_SUBSTITUTE = Pattern.compile("(.*?) - (за (понедельник|вторник|среду|четверг|пятницу|субботу|воскресенье) и за (понедельник|вторник|среду|четверг|пятницу|субботу|воскресенье))( \\(под зачало\\))?");
+    private static final Pattern PATTERN_COMPLEX_GROUPS1 = Pattern.compile("([123]?[А-Я][а-я]*\\. ([0-9]{1,3}):.+?),([0-9]{1,3}) - ([0-9]{1,3}:[0-9]{1,3})");
+    private static final Pattern PATTERN_COMPLEX_GROUPS2 = Pattern.compile("([123]?[А-Я][а-я]*\\. .*?[0-9]{1,3}:[0-9]{1,3} - ([0-9]{1,3}):[0-9]{1,3}),(.+?)");
 
     private static List<String> HOLIDAYS_STATIC = Arrays.asList("09-21", "09-27", "12-04", "01-07", "01-19", "02-15", "04-07", "08-19", "08-28", "09-11", "10-14", "01-14", "07-07", "07-12");
 
@@ -187,6 +189,18 @@ public class BuParser {
             String numbers = link.substring(romanMatcher.end()).replaceAll("(\\d), (\\d)", "$1,$2");
             link = link.substring(0, romanMatcher.start()) + RomanNumbers.romanToDecimal(romanMatcher.group(1)) + ":" + numbers;
             romanMatcher = PATTERN_ROMAN.matcher(link);
+        }
+        Matcher cgm1 = PATTERN_COMPLEX_GROUPS1.matcher(link);
+        if (cgm1.matches()) {
+            System.out.print("CG: " + link + " replaced with "); //TODO remove
+            link = String.format("%s, %s:%s - %s", cgm1.group(1), cgm1.group(2), cgm1.group(3), cgm1.group(4));
+            System.out.println(link); //TODO remove
+        }
+        Matcher cgm2 = PATTERN_COMPLEX_GROUPS2.matcher(link);
+        if (cgm2.matches()) {
+            System.out.print("CG: " + link + " replaced with "); //TODO remove
+            link = String.format("%s, %s:%s", cgm2.group(1), cgm2.group(2), cgm2.group(3));
+            System.out.println(link); //TODO remove
         }
         if (!VALIDATOR_READINGS.matcher(link.toLowerCase() + ";").matches()) {
             throw new Exception("Invalid readings: " + link);
@@ -360,7 +374,7 @@ public class BuParser {
         new File(String.format(PATH_DIRECTORY, year)).mkdirs();
         int errorCount = 0;
         Calendar currentDay = Calendar.getInstance();
-        currentDay.set(year, Calendar.SEPTEMBER, 8);
+        currentDay.set(year, Calendar.MARCH, 05);
 
         //--- Run entry loop ---
         while (currentDay.get(Calendar.YEAR) == year) {
@@ -427,7 +441,7 @@ public class BuParser {
     }
 
     public static void main(String[] args) {
-
+        
         parseYear(2017);
     }
 
