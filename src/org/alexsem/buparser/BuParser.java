@@ -167,7 +167,7 @@ public class BuParser {
     }
 
     //==========================================================================
-    private static String beautifyLink(String link) throws Exception {
+    public static String beautifyLink(String link) throws Exception {
         link = link.replaceAll("последи\\&#769;", "");
         link = link.replaceAll(", *?\\d+-\\d+ зач\\.( \\(от полу&#769;\\))? *?,", "");
         link = link.replaceAll(", *?\\d+ зач\\.( \\(от полу&#769;\\))? *?,", "");
