@@ -168,6 +168,7 @@ public class BuParser {
 
     //==========================================================================
     public static String beautifyLink(String link) throws Exception {
+        link = link.replace('–', '-');
         link = link.replaceAll("последи\\&#769;", "");
         link = link.replaceAll(", *?\\d+-\\d+ зач\\.( \\(от полу&#769;\\))? *?,", "");
         link = link.replaceAll(", *?\\d+ зач\\.( \\(от полу&#769;\\))? *?,", "");
@@ -192,15 +193,15 @@ public class BuParser {
         }
         Matcher cgm1 = PATTERN_COMPLEX_GROUPS1.matcher(link);
         if (cgm1.matches()) {
-            System.out.print("CG: " + link + " replaced with "); //TODO remove
+//            System.out.print("CG: " + link + " replaced with "); //TODO remove
             link = String.format("%s, %s:%s - %s", cgm1.group(1), cgm1.group(2), cgm1.group(3), cgm1.group(4));
-            System.out.println(link); //TODO remove
+//            System.out.println(link); //TODO remove
         }
         Matcher cgm2 = PATTERN_COMPLEX_GROUPS2.matcher(link);
         if (cgm2.matches()) {
-            System.out.print("CG: " + link + " replaced with "); //TODO remove
+//            System.out.print("CG: " + link + " replaced with "); //TODO remove
             link = String.format("%s, %s:%s", cgm2.group(1), cgm2.group(2), cgm2.group(3));
-            System.out.println(link); //TODO remove
+//            System.out.println(link); //TODO remove
         }
         if (!VALIDATOR_READINGS.matcher(link.toLowerCase() + ";").matches()) {
             throw new Exception("Invalid readings: " + link);
@@ -284,7 +285,13 @@ public class BuParser {
         String lastComment = "";
         int numberOfNbspsEmp = 0;
         for (String nbspPart : readings.split("\\&nbsp;")) {
-            
+
+            if (!PATTERN_ROMAN.matcher(nbspPart).find()) {
+                System.out.println("Skipped NBSP part: " + nbspPart);
+                numberOfNbspsCalc--;
+                continue;
+            }
+
             if (PATTERN_DOUBLE_LINE.matcher(nbspPart).matches()) { //2 lines in one nbsp part
                 Matcher separator = PATTERN_COMMENT_SEPARATOR.matcher(nbspPart);
                 if (separator.find()) {
@@ -296,13 +303,18 @@ public class BuParser {
                     continue;
                 }
             }
-            
+
             Matcher readingMatcher = PATTERN_READING.matcher(nbspPart);
             if (readingMatcher.matches()) {
 
                 String link = readingMatcher.group(2).trim();
                 link = beautifyLink(link);
                 String comment = readingMatcher.group(1).trim();
+
+                if (comment.endsWith(", или")) {
+                    result.add(splitLineAndComment(comment.substring(0, comment.length() - ", или".length())));
+                    comment = "или";
+                }
 
                 Matcher substituteMatcher = PATTERN_SUBSTITUTE.matcher(comment);
                 if (substituteMatcher.matches()) {
@@ -365,6 +377,7 @@ public class BuParser {
     //==========================================================================
 
     private static void parseYear(int year) {
+        final Object monitor = new Object();
         //--- Determine holidays list ---
         List<String> holidays = getDynamicHolidaysForYear(year);
         holidays.addAll(HOLIDAYS_STATIC);
@@ -374,11 +387,13 @@ public class BuParser {
         new File(String.format(PATH_DIRECTORY, year)).mkdirs();
         int errorCount = 0;
         Calendar currentDay = Calendar.getInstance();
-        currentDay.set(year, Calendar.MARCH, 05);
+        currentDay.set(year, Calendar.JANUARY, 1);
 
         //--- Run entry loop ---
         while (currentDay.get(Calendar.YEAR) == year) {
-            System.out.println(currentDay.get(Calendar.DAY_OF_YEAR) + ": " + currentDay.getTime()); //TODO change
+            synchronized (monitor) {
+                System.out.println(currentDay.get(Calendar.DAY_OF_YEAR) + ": " + currentDay.getTime()); //TODO change
+            }
 
             //--- Parse basic info ---
             CalendarEntry currentEntry;
@@ -406,15 +421,20 @@ public class BuParser {
                         currentEntry.addReadingsApostle(line);
                     }
                 }
+            } catch (Exception ex) {
+                synchronized (monitor) {
+                    System.err.println(currentDay.get(Calendar.DAY_OF_YEAR) + ": " + currentDay.getTime()); //TODO change
+                    ex.printStackTrace();
+                }
+                errorCount++;
+            }
 
 //                System.out.println(currentEntry.toXML()); //TODO remove
-                try (PrintWriter writer = new PrintWriter(String.format(PATH_READINGS, year, currentDay.get(Calendar.DAY_OF_YEAR)))) {
-                    writer.write(currentEntry.toXML());
-                }
+            try (PrintWriter writer = new PrintWriter(String.format(PATH_READINGS, year, currentDay.get(Calendar.DAY_OF_YEAR)))) {
+                writer.write(currentEntry.toXML());
             } catch (Exception ex) {
-                System.err.println(currentDay.get(Calendar.DAY_OF_YEAR) + ": " + currentDay.getTime()); //TODO change
                 ex.printStackTrace();
-                errorCount++;
+                return;
             }
 
             //--- Append infodata ---
@@ -427,7 +447,7 @@ public class BuParser {
             info.append(currentEntry.isHoliday() ? '1' : '0');
             info.append('0');
             currentDay.add(Calendar.DAY_OF_YEAR, 1);
-            break; //TODO remove
+//            break; //TODO remove
         }
 
         //--- Save info file ---
@@ -441,7 +461,7 @@ public class BuParser {
     }
 
     public static void main(String[] args) {
-        
+            
         parseYear(2017);
     }
 

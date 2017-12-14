@@ -25,7 +25,7 @@ public class BeautifierFrame extends javax.swing.JFrame {
      */
     public BeautifierFrame() {
         initComponents();
-         Dimension objDimension = Toolkit.getDefaultToolkit().getScreenSize();
+        Dimension objDimension = Toolkit.getDefaultToolkit().getScreenSize();
         int iCoordX = (objDimension.width - this.getWidth()) / 2;
         int iCoordY = (objDimension.height - this.getHeight()) / 2;
         this.setLocation(iCoordX, iCoordY);
