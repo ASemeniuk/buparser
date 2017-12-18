@@ -10,9 +10,12 @@ import java.io.PrintWriter;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.time.DayOfWeek;
+import java.time.LocalDate;
+import java.time.Month;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Calendar;
 import java.util.Collection;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -73,42 +76,40 @@ public class BuParser {
         int d = (19 * a + 15) % 30;
         int e = (2 * b + 4 * c + 6 * d + 6) % 7;
         int f = d + e;
-        Calendar easter = Calendar.getInstance();
+        LocalDate easter;
         if (f <= 9) {
-            easter.set(year, Calendar.MARCH, f + 22);
+            easter = LocalDate.of(year, Month.MARCH, f + 22);
         } else {
-            easter.set(year, Calendar.APRIL, f - 9);
+            easter = LocalDate.of(year, Month.APRIL, f - 9);
         }
         switch (year / 100 + 1) {
             case 16:
             case 17:
-                easter.add(Calendar.DAY_OF_YEAR, 10);
+                easter = easter.plusDays(10);
                 break;
             case 18:
-                easter.add(Calendar.DAY_OF_YEAR, 11);
+                easter = easter.plusDays(11);
                 break;
             case 19:
-                easter.add(Calendar.DAY_OF_YEAR, 12);
+                easter = easter.plusDays(12);
                 break;
             case 20:
             case 21:
-                easter.add(Calendar.DAY_OF_YEAR, 13);
+                easter = easter.plusDays(13);
                 break;
             case 22:
-                easter.add(Calendar.DAY_OF_YEAR, 14);
+                easter = easter.plusDays(14);
                 break;
             case 23:
-                easter.add(Calendar.DAY_OF_YEAR, 15);
+                easter = easter.plusDays(15);
                 break;
         }
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM-dd");
         List<String> holidays = new ArrayList<>();
-        holidays.add(String.format("%1$tm-%1$td", easter.getTime()));
-        easter.add(Calendar.DAY_OF_YEAR, -7); //Palm
-        holidays.add(String.format("%1$tm-%1$td", easter.getTime()));
-        easter.add(Calendar.DAY_OF_YEAR, 7 + 39); //Ascension
-        holidays.add(String.format("%1$tm-%1$td", easter.getTime()));
-        easter.add(Calendar.DAY_OF_YEAR, 10); //Pentacost
-        holidays.add(String.format("%1$tm-%1$td", easter.getTime()));
+        holidays.add(formatter.format(easter)); //Easter
+        holidays.add(formatter.format(easter.minusDays(7)));  //Palm
+        holidays.add(formatter.format(easter.plusDays(40))); //Ascension
+        holidays.add(formatter.format(easter.plusDays(50))); //Pentacost
         return holidays;
     }
 
@@ -131,13 +132,13 @@ public class BuParser {
     }
 
     //==========================================================================
-    private static CalendarEntry parseBasicInfo(Calendar day, Collection<String> holidays) throws Exception {
+    private static CalendarEntry parseBasicInfo(LocalDate day, Collection<String> holidays) throws Exception {
         CalendarEntry entry = new CalendarEntry();
 
         //--- Check if holiday --- 
-        boolean holiday = day.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY || day.get(Calendar.DAY_OF_WEEK) == Calendar.SATURDAY;
+        boolean holiday = day.getDayOfWeek() == DayOfWeek.SUNDAY || day.getDayOfWeek() == DayOfWeek.SATURDAY;
         if (!holiday) {
-            holiday = holidays.contains(String.format("%1$tm-%1$td", day.getTime()));
+            holiday = holidays.contains(DateTimeFormatter.ofPattern("MM-dd").format(day));
         }
         entry.setHoliday(holiday);
 
@@ -261,7 +262,7 @@ public class BuParser {
     }
 
     //==========================================================================
-    private static List<Line> parseReadings(Calendar day) throws Exception {
+    private static List<Line> parseReadings(LocalDate day) throws Exception {
         List<Line> result = new ArrayList<>();
 
         //--- Parse readings ---
@@ -377,7 +378,6 @@ public class BuParser {
     //==========================================================================
 
     private static void parseYear(int year) {
-        final Object monitor = new Object();
         //--- Determine holidays list ---
         List<String> holidays = getDynamicHolidaysForYear(year);
         holidays.addAll(HOLIDAYS_STATIC);
@@ -386,14 +386,11 @@ public class BuParser {
         StringBuilder info = new StringBuilder();
         new File(String.format(PATH_DIRECTORY, year)).mkdirs();
         int errorCount = 0;
-        Calendar currentDay = Calendar.getInstance();
-        currentDay.set(year, Calendar.JANUARY, 1);
+        LocalDate currentDay = LocalDate.of(year, Month.JANUARY, 1);
 
         //--- Run entry loop ---
-        while (currentDay.get(Calendar.YEAR) == year) {
-            synchronized (monitor) {
-                System.out.println(currentDay.get(Calendar.DAY_OF_YEAR) + ": " + currentDay.getTime()); //TODO change
-            }
+        while (currentDay.getYear() == year) {
+            System.out.println(currentDay.getDayOfYear() + ": " + currentDay.toString()); //TODO change
 
             //--- Parse basic info ---
             CalendarEntry currentEntry;
@@ -422,15 +419,13 @@ public class BuParser {
                     }
                 }
             } catch (Exception ex) {
-                synchronized (monitor) {
-                    System.err.println(currentDay.get(Calendar.DAY_OF_YEAR) + ": " + currentDay.getTime()); //TODO change
-                    ex.printStackTrace();
-                }
+                System.err.println(currentDay.getDayOfYear() + ": " + currentDay.toString()); //TODO change
+                ex.printStackTrace();
                 errorCount++;
             }
 
 //                System.out.println(currentEntry.toXML()); //TODO remove
-            try (PrintWriter writer = new PrintWriter(String.format(PATH_READINGS, year, currentDay.get(Calendar.DAY_OF_YEAR)))) {
+            try (PrintWriter writer = new PrintWriter(String.format(PATH_READINGS, year, currentDay.getDayOfYear()))) {
                 writer.write(currentEntry.toXML());
             } catch (Exception ex) {
                 ex.printStackTrace();
@@ -438,20 +433,20 @@ public class BuParser {
             }
 
             //--- Append infodata ---
-            if (currentDay.get(Calendar.DAY_OF_MONTH) == 1 && currentDay.get(Calendar.MONTH) != Calendar.JANUARY) {
+            if (currentDay.getDayOfMonth() == 1 && currentDay.getMonth() != Month.JANUARY) {
                 info.append('\n');
             }
-            if (currentDay.get(Calendar.DAY_OF_MONTH) != 1) {
+            if (currentDay.getDayOfMonth() != 1) {
                 info.append(',');
             }
             info.append(currentEntry.isHoliday() ? '1' : '0');
             info.append('0');
-            currentDay.add(Calendar.DAY_OF_YEAR, 1);
+            currentDay = currentDay.plusDays(1);
 //            break; //TODO remove
         }
 
         //--- Save info file ---
-        try (PrintWriter writer = new PrintWriter(String.format(PATH_INFO, year, currentDay.get(Calendar.DAY_OF_YEAR)))) {
+        try (PrintWriter writer = new PrintWriter(String.format(PATH_INFO, year, currentDay.getDayOfYear()))) {
             writer.write(info.toString());
         } catch (IOException ex) {
             ex.printStackTrace();
@@ -461,7 +456,7 @@ public class BuParser {
     }
 
     public static void main(String[] args) {
-            
+
         parseYear(2017);
     }
 
