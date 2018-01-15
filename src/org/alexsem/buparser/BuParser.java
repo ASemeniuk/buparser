@@ -43,7 +43,7 @@ public class BuParser {
     private static final Pattern PATTERN_DOUBLE_LINE = Pattern.compile("((.*?)[,:\\-]? *?(([123] )?[А-Я][а-я]+?\\.,.*?\\d)\\.?){2}");
     private static final Pattern PATTERN_ROMAN = Pattern.compile("([IVXLCDM]+), ");
     private static final Pattern PATTERN_COMMENT_SEPARATOR = Pattern.compile("\\d\\.");
-    private static final Pattern PATTERN_COMMENT_LEFT = Pattern.compile("(.*?)[,:\\-]? *?(([123] )?[А-Я][а-я]+?\\.,.*\\d)\\.?");
+    private static final Pattern PATTERN_COMMENT_LEFT = Pattern.compile("(.*?)[,:\\-]? *?(([123] )?[А-Я][а-я]+?\\.,.*\\d)( \\(Недели \\d{1,2}-й\\))?\\.?");
     private static final Pattern PATTERN_SUBSTITUTE = Pattern.compile("(.*?) - (за (понедельник|вторник|среду|четверг|пятницу|субботу|воскресенье) и за (понедельник|вторник|среду|четверг|пятницу|субботу|воскресенье))( \\(под зачало\\))?");
     private static final Pattern PATTERN_COMPLEX_GROUPS1 = Pattern.compile("([123]?[А-Я][а-я]*\\. ([0-9]{1,3}):.+?),([0-9]{1,3}) - ([0-9]{1,3}:[0-9]{1,3})");
     private static final Pattern PATTERN_COMPLEX_GROUPS2 = Pattern.compile("([123]?[А-Я][а-я]*\\. .*?[0-9]{1,3}:[0-9]{1,3} - ([0-9]{1,3}):[0-9]{1,3}),(.+?)");
@@ -169,6 +169,11 @@ public class BuParser {
 
     //==========================================================================
     public static String beautifyLink(String link) throws Exception {
+        if (link.matches(".*?[^,] 1$")) {
+            System.out.print("Relpaced " + link); //TODO remove
+            link = link.substring(0, link.length() - 2);
+            System.out.println(" with " + link); //TODO remove
+        }
         link = link.replace('–', '-');
         link = link.replaceAll("последи\\&#769;", "");
         link = link.replaceAll(", *?\\d+-\\d+ зач\\.( \\(от полу&#769;\\))? *?,", "");
@@ -457,7 +462,7 @@ public class BuParser {
 
     public static void main(String[] args) {
 
-        parseYear(2017);
+        parseYear(2018);
     }
 
 }
