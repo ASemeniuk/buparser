@@ -1,4 +1,7 @@
+.idea/
 build/
 nbproject/
+out/
 build.xml
 manifest.mf
+*.iml

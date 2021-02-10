@@ -1,6 +1,7 @@
 package org.alexsem.buparser;
 
 import org.alexsem.buparser.util.RomanNumbers;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
@@ -14,12 +15,10 @@ import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.Month;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 import org.alexsem.buparser.CalendarEntry.Line;
 import org.alexsem.buparser.model.Book;
 import org.alexsem.buparser.model.Location;
@@ -33,17 +32,18 @@ public class BuParser {
     private static final String URL_TITLE = "http://www.patriarchia.ru/bu/%1$tY-%1$tm-%1$td/";
     private static final String URL_READINGS = "http://www.patriarchia.ru/rpc/date=%1$tY-%1$tm-%1$td/kld.xml";
 
-    private static final String PATH_DIRECTORY = "D:/calendar/%04d";
+    private static final String PATH_DIRECTORY = "c:/calendar/%04d";
     private static final String PATH_READINGS = PATH_DIRECTORY + "/%03d.xml";
     private static final String PATH_INFO = PATH_DIRECTORY + "/info.csv";
 
     private static final Pattern PATTERN_TITLE = Pattern.compile("Версия для печати.*?<br> *?<p> *?<b>(.*?)</p>");
     private static final Pattern PATTERN_READINGS = Pattern.compile("<div class=\"read\">(.*?)</div> *?<div class");
-    private static final Pattern PATTERN_READING = Pattern.compile("([^<]*?)[,:\\-]? *?<a.*?>([^<]*?)[\\.,]?</a>( *?<div.*?</div>)? *?");
+    private static final Pattern PATTERN_READING = Pattern.compile("([^<]*?)[,:\\-]? *?<a.*?>([^<]*?)[.,]?</a>( *?<div.*?</div>)? *?");
     private static final Pattern PATTERN_DOUBLE_LINE = Pattern.compile("((.*?)[,:\\-]? *?(([123] )?[А-Я][а-я]+?\\.,.*?\\d)\\.?){2}");
     private static final Pattern PATTERN_ROMAN = Pattern.compile("([IVXLCDM]+), ");
     private static final Pattern PATTERN_COMMENT_SEPARATOR = Pattern.compile("\\d\\.");
-    private static final Pattern PATTERN_COMMENT_LEFT = Pattern.compile("(.*?)[,:\\-]? *?(([123] )?[А-Я][а-я]+?\\.,.*\\d)( \\(Недели \\d{1,2}-й\\))?\\.?");
+    private static final Pattern PATTERN_COMMENT_LEFT = Pattern.compile("(.*?)[,:\\-]? *?(([123][ _])?[А-Я][а-я]+?\\.,.*\\d)( \\(Недели \\d{1,2}-й\\))?\\.?");
+    private static final Pattern PATTERN_MISSING_BOOK = Pattern.compile("<a.*?bible/(.+?)/.*?\\)(,.*)</a>");
     private static final Pattern PATTERN_SUBSTITUTE = Pattern.compile("(.*?) - (за (понедельник|вторник|среду|четверг|пятницу|субботу|воскресенье) и за (понедельник|вторник|среду|четверг|пятницу|субботу|воскресенье))( \\(под зачало\\))?");
     private static final Pattern PATTERN_COMPLEX_GROUPS1 = Pattern.compile("([123]?[А-Я][а-я]*\\. ([0-9]{1,3}):.+?),([0-9]{1,3}) - ([0-9]{1,3}:[0-9]{1,3})");
     private static final Pattern PATTERN_COMPLEX_GROUPS2 = Pattern.compile("([123]?[А-Я][а-я]*\\. .*?[0-9]{1,3}:[0-9]{1,3} - ([0-9]{1,3}):[0-9]{1,3}),(.+?)");
@@ -141,6 +141,9 @@ public class BuParser {
             holiday = holidays.contains(DateTimeFormatter.ofPattern("MM-dd").format(day));
         }
         entry.setHoliday(holiday);
+        if (true) { //TODO !!!!!!!!
+            return entry;
+        }
 
         //--- Parse title ---
         String titleData = readDataFromURL(String.format(URL_TITLE, day));
@@ -148,14 +151,16 @@ public class BuParser {
         Matcher titleMatcher = PATTERN_TITLE.matcher(titleData);
         if (titleMatcher.find()) {
             title = titleMatcher.group(1).trim();
-            title = title.replaceAll("\\&#769;", "");
+            title = title.replaceAll("&#769;", "");
             title = title.replaceAll("<a.*?/a>", "");
             title = title.replaceAll("<.*?>", "");
             title = title.replaceAll(" Аллилуия\\.", "");
         }
 //        System.out.println(title); //TODO remove
         if (title.isEmpty()) {
-            throw new Exception("Empty title: " + titleData);
+            System.out.println("Empty title: " + day.toString());
+            title = ". ";
+            //throw new Exception("Empty title: " + titleData);
         }
         int firstDot = title.indexOf('.');
         String subtitle = title.substring(firstDot + 1).trim();
@@ -175,19 +180,36 @@ public class BuParser {
             System.out.println(" with " + link); //TODO remove
         }
         link = link.replace('–', '-');
-        link = link.replaceAll("последи\\&#769;", "");
+        link = link.replaceAll("последи&#769;", "");
+        link = link.replaceAll("\u0301", "&#769;");
         link = link.replaceAll(", *?\\d+-\\d+ зач\\.( \\(от полу&#769;\\))? *?,", "");
         link = link.replaceAll(", *?\\d+ зач\\.( \\(от полу&#769;\\))? *?,", "");
         link = link.replaceAll("\\*", "");
         link = link.replaceAll("^(\\d) ([А-Яа-я])", "$1$2");
+        link = link.replaceAll(", или", "");
+        link = link.replaceAll("\\.? \\d{1,2}-е", "");
+        link = link.replaceAll("\\.? Прпп?\\.:", ""); //TODO careful with this one
+        link = link.replaceAll(" -$", "");
         link = link.replaceAll("Сол\\.", "Фес.");
+        link = link.replaceAll("1_Фес\\.", "1Фес.");
+        link = link.replaceAll("2_Фес\\.", "2Фес.");
+        link = link.replaceAll("1_Ин\\.", "1Ин.");
+        link = link.replaceAll("2_Ин\\.", "2Ин.");
+        link = link.replaceAll("3_Ин\\.", "3Ин.");
+        link = link.replaceAll("1_Пет\\.", "1Пет.");
+        link = link.replaceAll("2_Пет\\.", "2Пет.");
+        link = link.replaceAll("1_Кор\\.", "1Кор.");
+        link = link.replaceAll("2_Кор\\.", "2Кор.");
+        link = link.replaceAll("1_Тим\\.", "1Тим.");
+        link = link.replaceAll("2_Тим\\.", "2Тим.");
         link = link.replaceAll("Притч\\.", "Прит.");
-        link = link.replaceAll("Прем\\. Солом\\.", "Прем.");
+        link = link.replaceAll("Прем\\.[ _]Солом\\.", "Прем.");
         link = link.replaceAll(" \\(Недели \\d{1,2}-й\\)", "").trim();
         link = link.replaceAll("(\\d{2})\\d{2,3}", "$1");
         link = link.replaceAll(" \\(о Закхее\\)", "");
         link = link.replaceAll(" \\(о хананеянке\\)", "");
         link = link.replaceAll("; ", ", ");
+        link = link.replaceAll("\\.,", "\\.");
         if (link.endsWith(";") || link.endsWith(".") || link.endsWith(",")) {
             link = link.substring(0, link.length() - 1);
         }
@@ -216,8 +238,48 @@ public class BuParser {
     }
     //==========================================================================
 
+    private static String restoreMissingBookNames(String data) {
+        Matcher missingMatcher = PATTERN_MISSING_BOOK.matcher(data);
+        if (missingMatcher.matches()) {
+            data = String.format("%s.%s", missingMatcher.group(1), missingMatcher.group(2));
+            data = data.replaceAll("mf", "Мф");
+            data = data.replaceAll("mk", "Мк");
+            data = data.replaceAll("lk", "Лк");
+            data = data.replaceAll("jn", "Ин");
+            data = data.replaceAll("act", "Деян");
+            data = data.replaceAll("jak", "Иак");
+            data = data.replaceAll("pe1", "1 Пет");
+            data = data.replaceAll("pe2", "2 Пет");
+            data = data.replaceAll("jn1", "1 Ин");
+            data = data.replaceAll("jn2", "2 Ин");
+            data = data.replaceAll("jn3", "3 Ин");
+            data = data.replaceAll("jud", "Иуд");
+            data = data.replaceAll("rom", "Рим");
+            data = data.replaceAll("co1", "1 Кор");
+            data = data.replaceAll("co2", "2 Кор");
+            data = data.replaceAll("gal", "Гал");
+            data = data.replaceAll("eph", "Еф");
+            data = data.replaceAll("flp", "Флп");
+            data = data.replaceAll("col", "Кол");
+            data = data.replaceAll("fe1", "1 Фес");
+            data = data.replaceAll("fe2", "2 Фес");
+            data = data.replaceAll("ti1", "1 Тим");
+            data = data.replaceAll("ti2", "2 Тим");
+            data = data.replaceAll("tit", "Тит");
+            data = data.replaceAll("flm", "Флм");
+            data = data.replaceAll("heb", "Евр");
+            data = data.replaceAll("rev", "Откр");
+        }
+        data = data.replaceAll("Ин1\\.", "1 Ин.");
+        return data;
+    }
+
     private static Line splitLineAndComment(String data) throws Exception {
         Matcher leftMatcher = PATTERN_COMMENT_LEFT.matcher(data);
+        if (!leftMatcher.matches()) {
+            data = restoreMissingBookNames(data);
+            leftMatcher = PATTERN_COMMENT_LEFT.matcher(data);
+        }
         if (leftMatcher.matches()) {
             String link = leftMatcher.group(2);
             link = beautifyLink(link);
@@ -267,6 +329,14 @@ public class BuParser {
     }
 
     //==========================================================================
+
+    private static int countMatches(String data, String match) {
+        if (match.isEmpty()) {
+            return 0;
+        }
+        return (data.length() - data.replaceAll(Pattern.quote(match), "").length()) / match.length();
+    }
+
     private static List<Line> parseReadings(LocalDate day) throws Exception {
         List<Line> result = new ArrayList<>();
 
@@ -286,11 +356,12 @@ public class BuParser {
         if (readings.length() == 0) {
             throw new Exception("No readings data found" + readingsData);
         }
-        int numberOfNbspsCalc = (readings.length() - readings.replaceAll(Pattern.quote("&nbsp;"), "").length()) / "&nbsp;".length();
-        int numberOfPericopes = (readings.length() - readings.replaceAll(Pattern.quote("зач."), "").length()) / "зач.".length();
+        int numberOfNbspsCalc = countMatches(readings, "&nbsp;");
+        int numberOfPericopes = countMatches(readings, "зач.") + countMatches(readings, "\"), ");
         String lastComment = "";
         int numberOfNbspsEmp = 0;
-        for (String nbspPart : readings.split("\\&nbsp;")) {
+        for (String nbspPart : readings.split("&nbsp;")) {
+            nbspPart = nbspPart.trim();
 
             if (!PATTERN_ROMAN.matcher(nbspPart).find()) {
                 System.out.println("Skipped NBSP part: " + nbspPart);
@@ -341,8 +412,6 @@ public class BuParser {
                     } else {
                         lastComment = comment;
                     }
-//            System.out.println("Link: " + link + " Comment: " + comment); //TODO remove
-
                     result.add(new Line(link, comment));
                 }
                 numberOfNbspsEmp++;
@@ -391,7 +460,7 @@ public class BuParser {
         StringBuilder info = new StringBuilder();
         new File(String.format(PATH_DIRECTORY, year)).mkdirs();
         int errorCount = 0;
-        LocalDate currentDay = LocalDate.of(year, Month.JANUARY, 1);
+        LocalDate currentDay = LocalDate.of(year, Month.FEBRUARY, 1); //TODO change to JANUARY
 
         //--- Run entry loop ---
         while (currentDay.getYear() == year) {
@@ -428,8 +497,6 @@ public class BuParser {
                 ex.printStackTrace();
                 errorCount++;
             }
-
-//                System.out.println(currentEntry.toXML()); //TODO remove
             try (PrintWriter writer = new PrintWriter(String.format(PATH_READINGS, year, currentDay.getDayOfYear()))) {
                 writer.write(currentEntry.toXML());
             } catch (Exception ex) {
@@ -462,7 +529,7 @@ public class BuParser {
 
     public static void main(String[] args) {
 
-        parseYear(2018);
+        parseYear(2021);
     }
 
 }
